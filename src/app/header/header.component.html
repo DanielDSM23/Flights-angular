@@ -1,0 +1,83 @@
+<header className="bg-white shadow-sm sticky top-0 z-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center py-4">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+        <div className="bg-blue-600 p-2 rounded-lg">
+            <Plane className="h-6 w-6 text-white" />
+        </div>
+        <span className="text-blue-600">SkyWings Travel</span>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+        <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Flights
+        </a>
+        <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Hotels
+        </a>
+        <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Packages
+        </a>
+        <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Destinations
+        </a>
+        <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Deals
+        </a>
+        </nav>
+
+        {/* Right Side Actions */}
+        <div className="hidden md:flex items-center gap-4">
+        <Button variant="ghost" size="icon">
+            <Heart className="h-5 w-5" />
+        </Button>
+        <Button variant="ghost" size="icon">
+            <Bell className="h-5 w-5" />
+        </Button>
+        <Button variant="outline" className="gap-2">
+            <User className="h-4 w-4" />
+            Sign In
+        </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <Button
+        variant="ghost"
+        size="icon"
+        className="md:hidden"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+        <Menu className="h-6 w-6" />
+        </Button>
+    </div>
+
+    {/* Mobile Menu */}
+    {isMenuOpen && (
+        <div className="md:hidden py-4 border-t">
+        <nav className="flex flex-col gap-4">
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Flights
+            </a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Hotels
+            </a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Packages
+            </a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Destinations
+            </a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Deals
+            </a>
+            <Button variant="outline" className="gap-2 w-full justify-start">
+            <User className="h-4 w-4" />
+            Sign In
+            </Button>
+        </nav>
+        </div>
+    )}
+    </div>
+</header>
