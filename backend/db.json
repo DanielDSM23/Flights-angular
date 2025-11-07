@@ -1,0 +1,1142 @@
+{
+    "users": [
+        {
+            "uuid": "de7adfeb-cdcc-35f4-85eb-0d549760471b",
+            "first_name": "Caroline",
+            "last_name": "Menard",
+            "email": "maryse11@club-internet.fr",
+            "password": "B*XB.C"
+        },
+        {
+            "uuid": "1ea8a17e-3655-3590-bc81-b38e81ff663b",
+            "first_name": "Olivier",
+            "last_name": "Rousset",
+            "email": "remy17@diallo.com",
+            "password": "i!q@6^2W"
+        },
+        {
+            "uuid": "be69cb75-3aab-3e9d-b3b5-990883eb2bd3",
+            "first_name": "Daniel",
+            "last_name": "Texier",
+            "email": "gregoire.laine@laposte.net",
+            "password": "]WSx2OO%J0(z0F-7<"
+        },
+        {
+            "uuid": "0ea1a149-d263-3639-986d-56ce3cae1789",
+            "first_name": "G\u00e9rard",
+            "last_name": "Berger",
+            "email": "benoit.dupont@barbier.com",
+            "password": "!ij7,TPd~j"
+        },
+        {
+            "uuid": "a2720322-1115-30fd-b2de-c5d56be10367",
+            "first_name": "Jacqueline",
+            "last_name": "Cordier",
+            "email": "gilles.raymond@dbmail.com",
+            "password": "!w8\/,Wyb^lA^27M}o}"
+        },
+        {
+            "uuid": "bf15142c-f72b-3291-886c-59556aa8d8e8",
+            "first_name": "Louis",
+            "last_name": "Jacquet",
+            "email": "barbe.louis@hotmail.fr",
+            "password": "UxcYg|!i,"
+        },
+        {
+            "uuid": "77b475ba-06df-34f3-81d2-a0c73cf76a77",
+            "first_name": "Alice",
+            "last_name": "Duhamel",
+            "email": "cmasson@orange.fr",
+            "password": "h\/)GR`@\"wAY};aOx`;.|"
+        },
+        {
+            "uuid": "78dd2c58-e1ec-395d-8704-64511da43223",
+            "first_name": "\u00c9lise",
+            "last_name": "Antoine",
+            "email": "lberger@wanadoo.fr",
+            "password": "9f\"8$0kuu{N!|?5]"
+        },
+        {
+            "uuid": "3c41545d-1ffe-3a2c-bc19-89758467d3bb",
+            "first_name": "Marianne",
+            "last_name": "Chretien",
+            "email": "louise61@sfr.fr",
+            "password": "@f*o.Mv0:"
+        },
+        {
+            "uuid": "239dfe36-65b0-3755-96bf-e7af116791ae",
+            "first_name": "Alice",
+            "last_name": "Laine",
+            "email": "pcousin@live.com",
+            "password": "P[LS8|%Y.Z"
+        },
+        {
+            "uuid": "d7804baa-8267-36b3-80f5-742d60dab4c3",
+            "first_name": "Audrey",
+            "last_name": "Humbert",
+            "email": "guy.blin@wanadoo.fr",
+            "password": "t[[\\12D"
+        },
+        {
+            "uuid": "c41ca333-41e1-3961-9630-09d8a9ca6f9c",
+            "first_name": "Alexandre",
+            "last_name": "Simon",
+            "email": "margaret.schneider@tele2.fr",
+            "password": ";P^y'g1d~K^Mz^x"
+        },
+        {
+            "uuid": "1e64d1a4-8743-3202-886f-89bd82cfd80f",
+            "first_name": "Danielle",
+            "last_name": "Boulay",
+            "email": "matthieu98@noos.fr",
+            "password": "dm{]xyI0!j"
+        },
+        {
+            "uuid": "f219aed6-d5bb-32f1-8615-e346cbf85517",
+            "first_name": "Ren\u00e9e",
+            "last_name": "Fournier",
+            "email": "leon52@devaux.com",
+            "password": "MWS*`sQ"
+        },
+        {
+            "uuid": "0aaa2bcb-efe4-3f14-bae0-c16daa124420",
+            "first_name": "Aurore",
+            "last_name": "Didier",
+            "email": "thierry30@yahoo.fr",
+            "password": "Ym:7ki"
+        },
+        {
+            "uuid": "b69b9aab-30a7-3c87-afc9-cff9e108b08a",
+            "first_name": "Claude",
+            "last_name": "Dos Santos",
+            "email": "hortense48@free.fr",
+            "password": "%@.yH7!2R'mpC$"
+        },
+        {
+            "uuid": "64c7281d-4ec2-3152-8c83-369d2e846b51",
+            "first_name": "No\u00ebl",
+            "last_name": "Normand",
+            "email": "bonneau.laetitia@turpin.com",
+            "password": "D_r*nUN[bhuAK'_"
+        },
+        {
+            "uuid": "f9abe50a-eb01-3198-9795-d144f9ed3ae6",
+            "first_name": "Raymond",
+            "last_name": "Bouchet",
+            "email": "palbert@gmail.com",
+            "password": "#PUfIJWYb0\"5v"
+        },
+        {
+            "uuid": "d9cf6750-00db-35e1-b9f2-16e8be7671b9",
+            "first_name": "Luc",
+            "last_name": "Didier",
+            "email": "gilbert.bourdon@club-internet.fr",
+            "password": "d1mD'*WjL3NLu4Kus"
+        },
+        {
+            "uuid": "c89ce220-745e-3041-bf32-e1aa2b69c148",
+            "first_name": "Fr\u00e9d\u00e9rique",
+            "last_name": "Lefebvre",
+            "email": "adele82@lopez.fr",
+            "password": "{6}5JI;~;2\"Ml\\"
+        },
+        {
+            "uuid": "181b7205-1394-3aba-bc02-7931c107696b",
+            "first_name": "Ad\u00e8le",
+            "last_name": "Rolland",
+            "email": "guillot.alexandre@tele2.fr",
+            "password": "Xe20%s"
+        },
+        {
+            "uuid": "52551c5f-7610-3e78-a46b-b3480dca6ebe",
+            "first_name": "\u00c9l\u00e9onore",
+            "last_name": "Moreau",
+            "email": "huet.laurence@baudry.com",
+            "password": "~L&5sghZh^tL&%0t3)^$"
+        },
+        {
+            "uuid": "73796d17-a0dd-3c27-9e15-33f66544238a",
+            "first_name": "Pauline",
+            "last_name": "Noel",
+            "email": "maggie84@rodrigues.com",
+            "password": "NgS]m_PxSlV:1^"
+        },
+        {
+            "uuid": "d2335d52-40ce-32d7-8145-fa1e81b0b1f4",
+            "first_name": "Paulette",
+            "last_name": "Girard",
+            "email": "gonzalez.thibaut@live.com",
+            "password": "%N}XIC:i]K3"
+        },
+        {
+            "uuid": "22ff63bf-c1f8-365a-baf7-4e1e4e654e96",
+            "first_name": "Sylvie",
+            "last_name": "Besson",
+            "email": "bertrand.colas@legros.com",
+            "password": "i>R@tJ<UZU4#'(.cz_o"
+        },
+        {
+            "uuid": "007cfff5-828c-39d9-b43c-931cef64e8bf",
+            "first_name": "\u00c9dith",
+            "last_name": "Legendre",
+            "email": "pereira.madeleine@hotmail.fr",
+            "password": "LHcR(h%"
+        },
+        {
+            "uuid": "2d45e01d-b546-3ea2-8d12-81a9f7b4969a",
+            "first_name": "Adrienne",
+            "last_name": "Lenoir",
+            "email": "ramos.agathe@arnaud.net",
+            "password": "WD`hPf"
+        },
+        {
+            "uuid": "2d6c176b-847b-3a24-94ea-43a0df0e2d50",
+            "first_name": "Daniel",
+            "last_name": "Martineau",
+            "email": "sabine.charrier@dasilva.com",
+            "password": "YX'ZPH6O$@"
+        },
+        {
+            "uuid": "d9667e2b-f660-3f7e-b26a-4f084a45a9fc",
+            "first_name": "\u00c9ric",
+            "last_name": "Roger",
+            "email": "bourgeois.nicole@muller.com",
+            "password": "|eD\"DZh<"
+        },
+        {
+            "uuid": "76d0bf4b-05d7-3142-b777-bdd9b9b60ecf",
+            "first_name": "Thomas",
+            "last_name": "Andre",
+            "email": "morin.susan@godard.net",
+            "password": "!cx\/>R@{,KRxr#h`"
+        }
+    ],
+
+    "flights": [
+    {
+      "reference": "B30001",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "AF276",
+            "from": "CDG",
+            "to": "HND",
+            "depart": "2026-01-01T10:00:00Z",
+            "arrive": "2026-01-01T23:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 950.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30002",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "JL046",
+            "from": "CDG",
+            "to": "HND",
+            "depart": "2026-01-01T11:30:00Z",
+            "arrive": "2026-01-02T01:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 1020.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30003",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "NH216",
+            "from": "CDG",
+            "to": "HND",
+            "depart": "2026-01-01T13:00:00Z",
+            "arrive": "2026-01-02T04:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 1100.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30004",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "KE902",
+            "from": "CDG",
+            "to": "ICN",
+            "depart": "2026-01-01T09:30:00Z",
+            "arrive": "2026-01-01T18:00:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "KE711",
+            "from": "ICN",
+            "to": "HND",
+            "depart": "2026-01-01T20:00:00Z",
+            "arrive": "2026-01-02T00:30:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 880.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30005",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "AY1582",
+            "from": "CDG",
+            "to": "HEL",
+            "depart": "2026-01-01T07:00:00Z",
+            "arrive": "2026-01-01T11:30:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "AY073",
+            "from": "HEL",
+            "to": "HND",
+            "depart": "2026-01-01T13:00:00Z",
+            "arrive": "2026-01-02T05:30:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 790.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30006",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "KL1224",
+            "from": "CDG",
+            "to": "AMS",
+            "depart": "2026-01-01T06:30:00Z",
+            "arrive": "2026-01-01T08:00:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "KL861",
+            "from": "AMS",
+            "to": "HND",
+            "depart": "2026-01-01T10:00:00Z",
+            "arrive": "2026-01-02T05:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 970.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30007",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "CX260",
+            "from": "CDG",
+            "to": "HKG",
+            "depart": "2026-01-01T12:00:00Z",
+            "arrive": "2026-01-02T04:30:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "CX542",
+            "from": "HKG",
+            "to": "HND",
+            "depart": "2026-01-02T06:30:00Z",
+            "arrive": "2026-01-02T11:30:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 890.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30008",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "BA303",
+            "from": "CDG",
+            "to": "LHR",
+            "depart": "2026-01-01T08:30:00Z",
+            "arrive": "2026-01-01T09:30:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "BA007",
+            "from": "LHR",
+            "to": "HND",
+            "depart": "2026-01-01T12:00:00Z",
+            "arrive": "2026-01-02T09:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 930.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30009",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "EK076",
+            "from": "CDG",
+            "to": "DXB",
+            "depart": "2026-01-01T14:00:00Z",
+            "arrive": "2026-01-01T23:00:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "EK312",
+            "from": "DXB",
+            "to": "HND",
+            "depart": "2026-01-02T02:30:00Z",
+            "arrive": "2026-01-02T17:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 1050.0,
+        "currency": "EUR"
+      }
+    },
+    {
+      "reference": "B30010",
+      "status": "confirmed",
+      "traveler": {
+        "firstName": "Marie",
+        "lastName": "Curie"
+      },
+      "segments": [
+        {
+          "flight": {
+            "number": "QR040",
+            "from": "CDG",
+            "to": "DOH",
+            "depart": "2026-01-01T16:00:00Z",
+            "arrive": "2026-01-01T23:30:00Z"
+          }
+        },
+        {
+          "flight": {
+            "number": "QR812",
+            "from": "DOH",
+            "to": "HND",
+            "depart": "2026-01-02T02:00:00Z",
+            "arrive": "2026-01-02T18:00:00Z"
+          }
+        }
+      ],
+      "total": {
+        "amount": 990.0,
+        "currency": "EUR"
+      }
+    }
+  ],
+  "airport": [
+    {
+      "id": "00A",
+      "type": "airports",
+      "attributes": {
+        "name": "Total RF Heliport",
+        "code": "00A",
+        "type": "heliport",
+        "latitude": 40.070985,
+        "longitude": -74.933689,
+        "elevation": 11,
+        "gps_code": "K00A",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00A"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00A"
+        }
+      }
+    },
+    {
+      "id": "00AA",
+      "type": "airports",
+      "attributes": {
+        "name": "Aero B Ranch Airport",
+        "code": "00AA",
+        "type": "small_airport",
+        "latitude": 38.704022,
+        "longitude": -101.473911,
+        "elevation": 3435,
+        "gps_code": "00AA",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AA"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AA"
+        }
+      }
+    },
+    {
+      "id": "00AK",
+      "type": "airports",
+      "attributes": {
+        "name": "Lowell Field",
+        "code": "00AK",
+        "type": "small_airport",
+        "latitude": 59.947733,
+        "longitude": -151.692524,
+        "elevation": 450,
+        "gps_code": "00AK",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AK"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AK"
+        }
+      }
+    },
+    {
+      "id": "00AL",
+      "type": "airports",
+      "attributes": {
+        "name": "Epps Airpark",
+        "code": "00AL",
+        "type": "small_airport",
+        "latitude": 34.86479949951172,
+        "longitude": -86.77030181884766,
+        "elevation": 820,
+        "gps_code": "00AL",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AL"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AL"
+        }
+      }
+    },
+    {
+      "id": "00AN",
+      "type": "airports",
+      "attributes": {
+        "name": "Katmai Lodge Airport",
+        "code": "00AN",
+        "type": "small_airport",
+        "latitude": 59.093287,
+        "longitude": -156.456699,
+        "elevation": 80,
+        "gps_code": "00AN",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AN"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AN"
+        }
+      }
+    },
+    {
+      "id": "00AS",
+      "type": "airports",
+      "attributes": {
+        "name": "Fulton Airport",
+        "code": "00AS",
+        "type": "small_airport",
+        "latitude": 34.9428028,
+        "longitude": -97.8180194,
+        "elevation": 1100,
+        "gps_code": "00AS",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AS"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AS"
+        }
+      }
+    },
+    {
+      "id": "00AZ",
+      "type": "airports",
+      "attributes": {
+        "name": "Cordes Airport",
+        "code": "00AZ",
+        "type": "small_airport",
+        "latitude": 34.305599212646484,
+        "longitude": -112.16500091552734,
+        "elevation": 3810,
+        "gps_code": "00AZ",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00AZ"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00AZ"
+        }
+      }
+    },
+    {
+      "id": "00CA",
+      "type": "airports",
+      "attributes": {
+        "name": "Goldstone (GTS) Airport",
+        "code": "00CA",
+        "type": "small_airport",
+        "latitude": 35.35474,
+        "longitude": -116.885329,
+        "elevation": 3038,
+        "gps_code": "00CA",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00CA"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00CA"
+        }
+      }
+    },
+    {
+      "id": "00CL",
+      "type": "airports",
+      "attributes": {
+        "name": "Williams Ag Airport",
+        "code": "00CL",
+        "type": "small_airport",
+        "latitude": 39.427188,
+        "longitude": -121.763427,
+        "elevation": 87,
+        "gps_code": "00CL",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00CL"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00CL"
+        }
+      }
+    },
+    {
+      "id": "00CN",
+      "type": "airports",
+      "attributes": {
+        "name": "Kitchen Creek Helibase Heliport",
+        "code": "00CN",
+        "type": "heliport",
+        "latitude": 32.7273736,
+        "longitude": -116.4597417,
+        "elevation": 3350,
+        "gps_code": "00CN",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00CN"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00CN"
+        }
+      }
+    },
+    {
+      "id": "00FA",
+      "type": "airports",
+      "attributes": {
+        "name": "Grass Patch Airport",
+        "code": "00FA",
+        "type": "small_airport",
+        "latitude": 28.64550018310547,
+        "longitude": -82.21900177001953,
+        "elevation": 53,
+        "gps_code": "00FA",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00FA"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00FA"
+        }
+      }
+    },
+    {
+      "id": "00FL",
+      "type": "airports",
+      "attributes": {
+        "name": "River Oak Airport",
+        "code": "00FL",
+        "type": "small_airport",
+        "latitude": 27.230899810791016,
+        "longitude": -80.96920013427734,
+        "elevation": 35,
+        "gps_code": "00FL",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00FL"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00FL"
+        }
+      }
+    },
+    {
+      "id": "00GA",
+      "type": "airports",
+      "attributes": {
+        "name": "Lt World Airport",
+        "code": "00GA",
+        "type": "small_airport",
+        "latitude": 33.76750183105469,
+        "longitude": -84.06829833984375,
+        "elevation": 700,
+        "gps_code": "00GA",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00GA"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00GA"
+        }
+      }
+    },
+    {
+      "id": "00GE",
+      "type": "airports",
+      "attributes": {
+        "name": "Caffrey Heliport",
+        "code": "00GE",
+        "type": "heliport",
+        "latitude": 33.887982,
+        "longitude": -84.736983,
+        "elevation": 957,
+        "gps_code": "00GE",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00GE"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00GE"
+        }
+      }
+    },
+    {
+      "id": "00HI",
+      "type": "airports",
+      "attributes": {
+        "name": "Kaupulehu Heliport",
+        "code": "00HI",
+        "type": "heliport",
+        "latitude": 19.832881,
+        "longitude": -155.978347,
+        "elevation": 43,
+        "gps_code": "00HI",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00HI"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00HI"
+        }
+      }
+    },
+    {
+      "id": "00ID",
+      "type": "airports",
+      "attributes": {
+        "name": "Delta Shores Airport",
+        "code": "00ID",
+        "type": "small_airport",
+        "latitude": 48.145301818847656,
+        "longitude": -116.21399688720703,
+        "elevation": 2064,
+        "gps_code": "00ID",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00ID"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00ID"
+        }
+      }
+    },
+    {
+      "id": "00IG",
+      "type": "airports",
+      "attributes": {
+        "name": "Goltl Airport",
+        "code": "00IG",
+        "type": "small_airport",
+        "latitude": 39.724028,
+        "longitude": -101.395994,
+        "elevation": 3359,
+        "gps_code": "00IG",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00IG"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00IG"
+        }
+      }
+    },
+    {
+      "id": "00IL",
+      "type": "airports",
+      "attributes": {
+        "name": "Hammer Airport",
+        "code": "00IL",
+        "type": "small_airport",
+        "latitude": 41.978401,
+        "longitude": -89.560402,
+        "elevation": 840,
+        "gps_code": "00IL",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00IL"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00IL"
+        }
+      }
+    },
+    {
+      "id": "00IN",
+      "type": "airports",
+      "attributes": {
+        "name": "St Mary Medical Center Heliport",
+        "code": "00IN",
+        "type": "heliport",
+        "latitude": 41.51139831542969,
+        "longitude": -87.2605972290039,
+        "elevation": 634,
+        "gps_code": "00IN",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00IN"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00IN"
+        }
+      }
+    },
+    {
+      "id": "00IS",
+      "type": "airports",
+      "attributes": {
+        "name": "Hayenga's Cant Find Farms Airport",
+        "code": "00IS",
+        "type": "small_airport",
+        "latitude": 40.02560043334961,
+        "longitude": -89.1229019165039,
+        "elevation": 820,
+        "gps_code": "00IS",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00IS"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00IS"
+        }
+      }
+    },
+    {
+      "id": "00KS",
+      "type": "airports",
+      "attributes": {
+        "name": "Hayden Farm Airport",
+        "code": "00KS",
+        "type": "small_airport",
+        "latitude": 38.72779846191406,
+        "longitude": -94.93049621582031,
+        "elevation": 1100,
+        "gps_code": "00KS",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00KS"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00KS"
+        }
+      }
+    },
+    {
+      "id": "00KY",
+      "type": "airports",
+      "attributes": {
+        "name": "Robbins Roost Airport",
+        "code": "00KY",
+        "type": "small_airport",
+        "latitude": 37.409400939941406,
+        "longitude": -84.61969757080078,
+        "elevation": 1265,
+        "gps_code": "00KY",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00KY"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00KY"
+        }
+      }
+    },
+    {
+      "id": "00LA",
+      "type": "airports",
+      "attributes": {
+        "name": "Shell Chemical East Site Heliport",
+        "code": "00LA",
+        "type": "heliport",
+        "latitude": 30.191944,
+        "longitude": -90.980833,
+        "elevation": 15,
+        "gps_code": "00LA",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00LA"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00LA"
+        }
+      }
+    },
+    {
+      "id": "00LL",
+      "type": "airports",
+      "attributes": {
+        "name": "Ac & R Components Heliport",
+        "code": "00LL",
+        "type": "heliport",
+        "latitude": 39.66529846191406,
+        "longitude": -89.70559692382812,
+        "elevation": 600,
+        "gps_code": "00LL",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00LL"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00LL"
+        }
+      }
+    },
+    {
+      "id": "00LS",
+      "type": "airports",
+      "attributes": {
+        "name": "Lejeune Airport",
+        "code": "00LS",
+        "type": "small_airport",
+        "latitude": 30.136299,
+        "longitude": -92.429398,
+        "elevation": 12,
+        "gps_code": "00LS",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00LS"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00LS"
+        }
+      }
+    },
+    {
+      "id": "00MD",
+      "type": "airports",
+      "attributes": {
+        "name": "Slater Field",
+        "code": "00MD",
+        "type": "small_airport",
+        "latitude": 38.75709915161133,
+        "longitude": -75.75379943847656,
+        "elevation": 45,
+        "gps_code": "00MD",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00MD"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00MD"
+        }
+      }
+    },
+    {
+      "id": "00MI",
+      "type": "airports",
+      "attributes": {
+        "name": "Dow Chemical Heliport",
+        "code": "00MI",
+        "type": "heliport",
+        "latitude": 43.94940185546875,
+        "longitude": -86.41670227050781,
+        "elevation": 588,
+        "gps_code": "00MI",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00MI"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00MI"
+        }
+      }
+    },
+    {
+      "id": "00MN",
+      "type": "airports",
+      "attributes": {
+        "name": "Battle Lake Municipal Airport",
+        "code": "00MN",
+        "type": "small_airport",
+        "latitude": 46.29999923706055,
+        "longitude": -95.70030212402344,
+        "elevation": 1365,
+        "gps_code": "00MN",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00MN"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00MN"
+        }
+      }
+    },
+    {
+      "id": "00MO",
+      "type": "airports",
+      "attributes": {
+        "name": "Cooper Flying Service Airport",
+        "code": "00MO",
+        "type": "small_airport",
+        "latitude": 37.202800750732,
+        "longitude": -94.412399291992,
+        "elevation": 970,
+        "gps_code": "00MO",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00MO"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00MO"
+        }
+      }
+    },
+    {
+      "id": "00MT",
+      "type": "airports",
+      "attributes": {
+        "name": "Livingston Healthcare Heliport",
+        "code": "00MT",
+        "type": "heliport",
+        "latitude": 45.675,
+        "longitude": -110.52515,
+        "elevation": 4465,
+        "gps_code": "00MT",
+        "icao_code": null,
+        "iata_code": null,
+        "local_code": "00MT"
+      },
+      "links": {
+        "self": {
+          "href": "https://airportsapi.com/api/airports/00MT"
+        }
+      }
+    }
+  ]
+}
