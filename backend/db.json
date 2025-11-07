@@ -470,11 +470,9 @@
   "airport": [
     {
       "id": "VHHH",
-      "type": "airports",
       "attributes": {
         "name": "Hong Kong International Airport",
         "code": "VHHH",
-        "type": "large_airport",
         "latitude": 22.308901,
         "longitude": 113.915001,
         "elevation": 28,
@@ -491,11 +489,9 @@
     },
     {
       "id": "EHAM",
-      "type": "airports",
       "attributes": {
         "name": "Amsterdam Airport Schiphol",
         "code": "EHAM",
-        "type": "large_airport",
         "latitude": 52.308601,
         "longitude": 4.76389,
         "elevation": -11,
@@ -512,11 +508,9 @@
     },
     {
       "id": "OTHH",
-      "type": "airports",
       "attributes": {
         "name": "Hamad International Airport",
         "code": "OTHH",
-        "type": "large_airport",
         "latitude": 25.273056,
         "longitude": 51.608056,
         "elevation": 13,
@@ -533,11 +527,9 @@
     },
     {
       "id": "OMDB",
-      "type": "airports",
       "attributes": {
         "name": "Dubai International Airport",
         "code": "OMDB",
-        "type": "large_airport",
         "latitude": 25.2527999878,
         "longitude": 55.3643989563,
         "elevation": 62,
@@ -554,11 +546,9 @@
     },
     {
       "id": "RKSI",
-      "type": "airports",
       "attributes": {
         "name": "Incheon International Airport",
         "code": "RKSI",
-        "type": "large_airport",
         "latitude": 37.469101,
         "longitude": 126.450996,
         "elevation": 23,
@@ -575,11 +565,9 @@
     },
     {
       "id": "EFHK",
-      "type": "airports",
       "attributes": {
         "name": "Helsinki Vantaa Airport",
         "code": "EFHK",
-        "type": "large_airport",
         "latitude": 60.318363,
         "longitude": 24.963341,
         "elevation": 179,
@@ -596,11 +584,9 @@
     },
     {
       "id": "RJTT",
-      "type": "airports",
       "attributes": {
         "name": "Tokyo Haneda International Airport",
         "code": "RJTT",
-        "type": "large_airport",
         "latitude": 35.552299,
         "longitude": 139.779999,
         "elevation": 35,
@@ -612,11 +598,9 @@
     },
     {
       "id": "LFBD",
-      "type": "airports",
       "attributes": {
         "name": "Bordeaux–Mérignac Airport",
         "code": "LFBD",
-        "type": "large_airport",
         "latitude": 44.82865,
         "longitude": -0.715356,
         "elevation": 162,
@@ -633,11 +617,9 @@
     },
     {
       "id": "LFBO",
-      "type": "airports",
       "attributes": {
         "name": "Toulouse-Blagnac Airport",
         "code": "LFBO",
-        "type": "large_airport",
         "latitude": 43.629101,
         "longitude": 1.36382,
         "elevation": 499,
@@ -654,11 +636,9 @@
     },
     {
       "id": "LFLL",
-      "type": "airports",
       "attributes": {
         "name": "Lyon Saint-Exupéry Airport",
         "code": "LFLL",
-        "type": "large_airport",
         "latitude": 45.725996,
         "longitude": 5.090139,
         "elevation": 821,
@@ -675,11 +655,9 @@
     },
     {
       "id": "LFML",
-      "type": "airports",
       "attributes": {
         "name": "Marseille Provence Airport",
         "code": "LFML",
-        "type": "large_airport",
         "latitude": 43.438088,
         "longitude": 5.2125,
         "elevation": 74,
@@ -696,11 +674,9 @@
     },
     {
       "id": "LFMN",
-      "type": "airports",
       "attributes": {
         "name": "Nice-Côte d'Azur Airport",
         "code": "LFMN",
-        "type": "large_airport",
         "latitude": 43.658401,
         "longitude": 7.21587,
         "elevation": 12,
@@ -717,11 +693,9 @@
     },
     {
       "id": "LFPG",
-      "type": "airports",
       "attributes": {
         "name": "Charles de Gaulle International Airport",
         "code": "LFPG",
-        "type": "large_airport",
         "latitude": 49.012798,
         "longitude": 2.55,
         "elevation": 392,
@@ -738,11 +712,9 @@
     },
     {
       "id": "LFPO",
-      "type": "airports",
       "attributes": {
         "name": "Paris-Orly Airport",
         "code": "LFPO",
-        "type": "large_airport",
         "latitude": 48.72333,
         "longitude": 2.37944,
         "elevation": 291,
@@ -759,11 +731,9 @@
     },
     {
       "id": "LFSB",
-      "type": "airports",
       "attributes": {
         "name": "EuroAirport Basel–Mulhouse–Freiburg",
         "code": "LFSB",
-        "type": "large_airport",
         "latitude": 47.60068,
         "longitude": 7.521117,
         "elevation": 885,
@@ -780,11 +750,9 @@
     },
     {
       "id": "EDDB",
-      "type": "airports",
       "attributes": {
         "name": "Berlin Brandenburg Airport",
         "code": "EDDB",
-        "type": "large_airport",
         "latitude": 52.362247,
         "longitude": 13.500672,
         "elevation": 157,
@@ -801,11 +769,9 @@
     },
     {
       "id": "EDDF",
-      "type": "airports",
       "attributes": {
         "name": "Frankfurt Airport",
         "code": "EDDF",
-        "type": "large_airport",
         "latitude": 50.030241,
         "longitude": 8.561096,
         "elevation": 364,
@@ -822,11 +788,9 @@
     },
     {
       "id": "EDDH",
-      "type": "airports",
       "attributes": {
         "name": "Hamburg Helmut Schmidt Airport",
         "code": "EDDH",
-        "type": "large_airport",
         "latitude": 53.630402,
         "longitude": 9.98823,
         "elevation": 53,
@@ -843,11 +807,9 @@
     },
     {
       "id": "EDDK",
-      "type": "airports",
       "attributes": {
         "name": "Cologne Bonn Airport",
         "code": "EDDK",
-        "type": "large_airport",
         "latitude": 50.865898,
         "longitude": 7.14274,
         "elevation": 302,
@@ -864,11 +826,9 @@
     },
     {
       "id": "EDDL",
-      "type": "airports",
       "attributes": {
         "name": "Düsseldorf Airport",
         "code": "EDDL",
-        "type": "large_airport",
         "latitude": 51.289501,
         "longitude": 6.76678,
         "elevation": 147,
@@ -885,11 +845,9 @@
     },
     {
       "id": "EDDM",
-      "type": "airports",
       "attributes": {
         "name": "Munich Airport",
         "code": "EDDM",
-        "type": "large_airport",
         "latitude": 48.353802,
         "longitude": 11.7861,
         "elevation": 1487,
@@ -906,11 +864,9 @@
     },
     {
       "id": "EDDN",
-      "type": "airports",
       "attributes": {
         "name": "Nuremberg Airport",
         "code": "EDDN",
-        "type": "large_airport",
         "latitude": 49.498699,
         "longitude": 11.078056,
         "elevation": 1046,
@@ -927,11 +883,9 @@
     },
     {
       "id": "EDDP",
-      "type": "airports",
       "attributes": {
         "name": "Leipzig/Halle Airport",
         "code": "EDDP",
-        "type": "large_airport",
         "latitude": 51.420657,
         "longitude": 12.232705,
         "elevation": 465,
@@ -948,11 +902,9 @@
     },
     {
       "id": "EDDS",
-      "type": "airports",
       "attributes": {
         "name": "Stuttgart Airport",
         "code": "EDDS",
-        "type": "large_airport",
         "latitude": 48.689899,
         "longitude": 9.22196,
         "elevation": 1276,
@@ -969,11 +921,9 @@
     },
     {
       "id": "EDDV",
-      "type": "airports",
       "attributes": {
         "name": "Hannover Airport",
         "code": "EDDV",
-        "type": "large_airport",
         "latitude": 52.461102,
         "longitude": 9.68508,
         "elevation": 183,
@@ -990,11 +940,9 @@
     },
     {
       "id": "EGAA",
-      "type": "airports",
       "attributes": {
         "name": "Belfast International Airport",
         "code": "EGAA",
-        "type": "large_airport",
         "latitude": 54.6575012207,
         "longitude": -6.2158298492399995,
         "elevation": 268,
@@ -1011,11 +959,9 @@
     },
     {
       "id": "EGBB",
-      "type": "airports",
       "attributes": {
         "name": "Birmingham Airport",
         "code": "EGBB",
-        "type": "large_airport",
         "latitude": 52.453899,
         "longitude": -1.74803,
         "elevation": 327,
@@ -1032,11 +978,9 @@
     },
     {
       "id": "EGCC",
-      "type": "airports",
       "attributes": {
         "name": "Manchester Airport",
         "code": "EGCC",
-        "type": "large_airport",
         "latitude": 53.349375,
         "longitude": -2.279521,
         "elevation": 257,
@@ -1053,11 +997,9 @@
     },
     {
       "id": "EGGW",
-      "type": "airports",
       "attributes": {
         "name": "London Luton Airport",
         "code": "EGGW",
-        "type": "large_airport",
         "latitude": 51.874699,
         "longitude": -0.368333,
         "elevation": 526,
@@ -1074,11 +1016,9 @@
     },
     {
       "id": "EGKK",
-      "type": "airports",
       "attributes": {
         "name": "London Gatwick Airport",
         "code": "EGKK",
-        "type": "large_airport",
         "latitude": 51.148771,
         "longitude": -0.192089,
         "elevation": 202,
@@ -1095,11 +1035,9 @@
     },
     {
       "id": "EGLL",
-      "type": "airports",
       "attributes": {
         "name": "London Heathrow Airport",
         "code": "EGLL",
-        "type": "large_airport",
         "latitude": 51.4706,
         "longitude": -0.461941,
         "elevation": 83,
@@ -1116,11 +1054,9 @@
     },
     {
       "id": "EGPF",
-      "type": "airports",
       "attributes": {
         "name": "Glasgow Airport",
         "code": "EGPF",
-        "type": "large_airport",
         "latitude": 55.871899,
         "longitude": -4.43306,
         "elevation": 26,
@@ -1137,11 +1073,9 @@
     },
     {
       "id": "EGPH",
-      "type": "airports",
       "attributes": {
         "name": "Edinburgh Airport",
         "code": "EGPH",
-        "type": "large_airport",
         "latitude": 55.950145,
         "longitude": -3.372288,
         "elevation": 135,
@@ -1158,11 +1092,9 @@
     },
     {
       "id": "EGSS",
-      "type": "airports",
       "attributes": {
         "name": "London Stansted Airport",
         "code": "EGSS",
-        "type": "large_airport",
         "latitude": 51.884998,
         "longitude": 0.235,
         "elevation": 348,
