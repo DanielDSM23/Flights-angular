@@ -38,6 +38,9 @@
       >
         Se connecter
       </button>
+      <div *ngIf="wrongPassword" class="text-red-500 text-sm mt-4 text-center">
+        Email ou mot de passe incorrect.
+      </div>
       <a routerLink="/register" class="block text-center mt-4 text-blue-500 hover:underline">
         Créer un compte
       </a>

@@ -68,6 +68,9 @@
           <div *ngIf="registerForm.get('passwordcheck')?.errors?.['minlength']">
             Le mot de passe doit contenir au moins 6 caractères.
           </div>
+          <div *ngIf="registerForm.get('passwordcheck') !== registerForm.get('password')">
+            Les mots de passe ne correspondent pas.
+          </div>
         </div>
       </div>
       <button

@@ -17,6 +17,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './auth.component.css'
 })
 export class AuthComponent {
+  wrongPassword:boolean = false;
   constructor(private authService : AuthService, private router : Router) {}
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -29,7 +30,7 @@ export class AuthComponent {
         this.authService.loginUser(users[0].id, users[0].first_name, users[0].last_name);
         this.router.navigate(['']);
       } else {
-        alert('Invalid email or password.');
+        this.wrongPassword = true;
       }
     });
   }
