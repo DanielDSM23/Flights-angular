@@ -36,4 +36,8 @@ export class AuthService {
     return localStorage.getItem('user') !== null;
   }
 
+  public addUser(user: User): Observable<User> {
+    return this.http.post<User>('http://localhost:3000/users', user);
+  }
+
 }
