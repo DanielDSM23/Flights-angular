@@ -1,7 +1,9 @@
+import { SegmentInterface } from "./segment.interface";
+import { TotalInterface } from "./total.interface";
+
 export interface FlightInterface {
-    number: string,
-    from: string,
-    to: string,
-    depart: Date,
-    arrive: Date
+    reference: string,
+    status: string,
+    segments: SegmentInterface,
+    total: TotalInterface
 }
