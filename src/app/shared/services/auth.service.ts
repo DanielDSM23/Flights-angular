@@ -30,6 +30,8 @@ export class AuthService {
 
   public logoutUser(): void {
     localStorage.removeItem('user');
+    localStorage.removeItem('surname');
+    localStorage.removeItem('name');
   }
 
   public isUserLoggedIn(): boolean {
