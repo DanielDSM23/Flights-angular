@@ -1,7 +1,7 @@
 export interface FlightInterface {
     reference: string,
     status: string,
-    segments: SegmentInterface,
+    segments: SegmentInterface[],
     total: TotalInterface
 }
 
