@@ -1,0 +1,146 @@
+<div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 -mt-20 relative z-10 max-w-5xl mx-auto">
+    <div defaultValue="flights" class="flex flex-col gap-4 w-full">
+        <div class="">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                
+                <li class="me-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false" value="flights">Vols</button>
+                </li>
+                <li class="me-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" value="hotels">Destinations</button>
+                </li>
+                <li class="me-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false" value="packages">Voyages</button>
+                </li>
+            </ul>
+        </div>
+        <div id="default-styled-tab-content">
+            <div class="hidden p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab" value="flights">
+                <div class="flex flex-wrap gap-4">
+                    @for(tripType of tripTypeList; track tripType){
+                        <app-button [buttonType]="tripType"></app-button>
+                    }
+                    
+                </div>
+                <form id="default-tab-content">
+                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    
+                        <!-- {/* From */} -->
+                        <div class="space-y-2">
+                            <Label htmlFor="from">From</Label>
+                            <div class="relative">
+                                 <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
+                                <Input id="from" placeholder="New York (JFK)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                            </div>
+                        </div>
+    
+                        <!-- {/* To */} -->
+                        <div class="space-y-2">
+                            <Label htmlFor="to">To</Label>
+                            <div class="relative">
+                                 <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
+                                <Input id="to" placeholder="London (LHR)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                            </div>
+                        </div>
+
+                        <!-- @if round trip here-->
+                        
+                        <div class="space-y-2 col-span-2">
+                            <span class="text-black">Departure</span>
+                            <div id="date-range-picker" date-rangepicker class="flex items-center">
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                        </svg>
+                                    </div>
+                                    <input id="datepicker-range-start" name="start" type="text"
+                                        class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                                        placeholder="Select date start">
+                                </div>
+                                <span class="mx-2 text-black">to</span>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                        </svg>
+                                    </div>
+                                    <input id="datepicker-range-end" name="end" type="text"
+                                        class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                                        placeholder="Select date end">
+                                </div>
+                            </div>
+
+                                
+
+                        </div>
+    
+                        <!-- @if one way trip here  -->
+                        <div class="space-y-2">
+                            <!-- <Label>Return</Label>
+                                    <Popover>
+                                        <PopoverTrigger asChild>
+                                            <app-button
+                                            [variant]="outline"
+                                            class="w-full justify-start text-left"
+                                            >
+                                            <CalendarIcon class="mr-2 h-4 w-4" />
+                                            {returnDate ? format(returnDate, "PPP") : "Select date"}
+                                            </app-button>
+                                        </PopoverTrigger>
+                                        <PopoverContent class="w-auto p-0" align="start">
+                                            <Calendar
+                                            mode="single"
+                                            selected={returnDate}
+                                            onSelect={setReturnDate}
+                                            initialFocus
+                                            />
+                                        </PopoverContent>
+                                    </Popover> -->
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-3">
+                        <div class="space-y-2">
+                            <label for="passengerNumber">Passengers</label>
+                            <select class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="passengerNumber">
+                                <option selected="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5+ Passengers</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="ticketClass">Class</label>
+                            <select class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="ticketClass">
+                                <option selected="economy">Economy</option>
+                                <option value="premium">Premium Economy</option>
+                                <option value="business">Business</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+                        <div class="flex items-end space-y-2">
+                            <button type="submit" class="w-full text-white min-h-10 max-h-10 bg-gray-900 font-semibold hover:bg-gray-700 font-large rounded-md text-sm px-5 py-1.5">Rechercher les vols</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="hidden p-4 rounded-lg" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab" value="hotels">
+                <div class="text-center py-12 text-gray-500">
+                    <p>Hotel search coming soon...</p>
+                </div>
+            </div>
+            <div class="hidden p-4 rounded-lg" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab" value="packages">
+                <div class="text-center py-12 text-gray-500">
+                    <p>Package search coming soon...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
