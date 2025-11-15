@@ -5,7 +5,6 @@ import { LucideAngularModule, MapPin } from 'lucide-angular';
 @Component({
   selector: 'app-flight-search-form',
   imports: [
-    ButtonComponent,
     LucideAngularModule
   ],
   templateUrl: './flight-search-form.component.html',

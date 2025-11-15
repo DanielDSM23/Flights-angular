@@ -1,26 +1,33 @@
 <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 -mt-20 relative z-10 max-w-5xl mx-auto">
     <div defaultValue="flights" class="flex flex-col gap-4 w-full">
-        <div class="">
-            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
-                
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false" value="flights">Vols</button>
+        <div class="w-full">
+            <ul class="flex rounded-xl items-center text-sm font-medium text-center bg-gray-200 max-h-12 p-1" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-gray-900 bg-white hover:text-gray-700 border-transparent" data-tabs-inactive-classes="text-gray-900 hover:text-gray-700 border-transparent hover:border-gray-300" role="tablist">
+                <li class="grow" role="presentation">
+                    <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false" value="flights">Vols</button>
                 </li>
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" value="hotels">Destinations</button>
+                <li class="grow" role="presentation">
+                    <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" value="hotels">Destinations</button>
                 </li>
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false" value="packages">Voyages</button>
+                <li class="grow" role="presentation">
+                    <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false" value="packages">Voyages</button>
                 </li>
             </ul>
         </div>
         <div id="default-styled-tab-content">
             <div class="hidden p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab" value="flights">
-                <div class="flex flex-wrap gap-4">
-                    @for(tripType of tripTypeList; track tripType){
-                        <app-button [buttonType]="tripType"></app-button>
-                    }
-                    
+                <div class="flex flex-wrap mb-4 gap-4">
+                        <label>
+                            <input type="radio" name="tripOption" id="roundTrip" class="peer hidden" value="Round Trip" checked/>
+                            <div class="min-w-25 text-body text-sm px-5 py-1.5 border border-gray-200 rounded-md cursor-pointer p-2 peer-checked:bg-gray-900 peer-checked:text-white hover:bg-gray-700 hover:text-white">Round Trip</div>
+                        </label>
+                        <label>
+                            <input type="radio" name="tripOption" id="oneway" class="peer hidden" value="One Way"/>
+                            <div class="min-w-25 text-body text-sm px-5 py-1.5 border border-gray-200 rounded-md cursor-pointer p-2 peer-checked:bg-gray-900 peer-checked:text-white hover:bg-gray-700 hover:text-white">One Way</div>
+                        </label>
+                        <label>
+                            <input type="radio" name="tripOption" id="multiDestination" class="peer hidden" value="Multi Destination"/>
+                            <div class="min-w-25 text-body text-sm px-5 py-1.5 border border-gray-200 rounded-md cursor-pointer p-2 peer-checked:bg-gray-900 peer-checked:text-white hover:bg-gray-700 hover:text-white">Multi Destination</div>
+                        </label>
                 </div>
                 <form id="default-tab-content">
                     <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -29,8 +36,8 @@
                         <div class="space-y-2">
                             <Label htmlFor="from">From</Label>
                             <div class="relative">
-                                 <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
-                                <Input id="from" placeholder="New York (JFK)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
+                                <Input name="from" id="from" placeholder="New York (JFK)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
                             </div>
                         </div>
     
@@ -38,16 +45,15 @@
                         <div class="space-y-2">
                             <Label htmlFor="to">To</Label>
                             <div class="relative">
-                                 <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
-                                <Input id="to" placeholder="London (LHR)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
+                                <Input name="to" id="to" placeholder="London (LHR)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
                             </div>
                         </div>
 
                         <!-- @if round trip here-->
-                        
                         <div class="space-y-2 col-span-2">
                             <span class="text-black">Departure</span>
-                            <div id="date-range-picker" date-rangepicker class="flex items-center">
+                            <div id="date-range-picker" date-rangepicker class="flex items-center" datepicker-format="dd/mm/yyyy">
                                 <div class="relative">
                                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -74,9 +80,6 @@
                                         placeholder="Select date end">
                                 </div>
                             </div>
-
-                                
-
                         </div>
     
                         <!-- @if one way trip here  -->
@@ -108,7 +111,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-3">
                         <div class="space-y-2">
                             <label for="passengerNumber">Passengers</label>
-                            <select class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="passengerNumber">
+                            <select name="passengerNumber" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="passengerNumber">
                                 <option selected="1">1 Passenger</option>
                                 <option value="2">2 Passengers</option>
                                 <option value="3">3 Passengers</option>
@@ -118,7 +121,7 @@
                         </div>
                         <div class="space-y-2">
                             <label for="ticketClass">Class</label>
-                            <select class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="ticketClass">
+                            <select name="ticketClass" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="ticketClass">
                                 <option selected="economy">Economy</option>
                                 <option value="premium">Premium Economy</option>
                                 <option value="business">Business</option>
