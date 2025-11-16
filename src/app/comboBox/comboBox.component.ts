@@ -3,10 +3,10 @@ import { Component, computed, input, output, signal } from '@angular/core';
 @Component({
   selector: 'app-button',
   imports: [],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  templateUrl: './comboBox.component.html',
+  styleUrl: './comboBox.component.css'
 })
-export class ButtonComponent {
+export class ComboBoxComponent {
   variant = input<string>("default");
   size = input<string>("default");
   buttonType = input<string>("");

@@ -1,4 +1,4 @@
-<div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 -mt-20 relative z-10 max-w-5xl mx-auto">
+<div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 -mt-20 relative z-10 max-w-5xl mx-auto" (click)="onComboBoxBlur(comboBoxStateFrom,comboBoxStateTo)">
     <div defaultValue="flights" class="flex flex-col gap-4 w-full">
         <div class="w-full">
             <ul class="flex rounded-xl items-center text-sm font-medium text-center bg-gray-200 max-h-12 p-1" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-gray-900 bg-white hover:text-gray-700 border-transparent" data-tabs-inactive-classes="text-gray-900 hover:text-gray-700 border-transparent hover:border-gray-300" role="tablist">
@@ -29,25 +29,87 @@
                             <div class="min-w-25 text-body text-sm px-5 py-1.5 border border-gray-200 rounded-md cursor-pointer p-2 peer-checked:bg-gray-900 peer-checked:text-white hover:bg-gray-700 hover:text-white">Multi Destination</div>
                         </label>
                 </div>
-                <form id="default-tab-content">
+                <form id="default-tab-content" [formGroup]="flightForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                    <!-- <input type="text" formControlName="from">
+                    <input type="text" formControlName="to"> -->
                     <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    
                         <!-- {/* From */} -->
-                        <div class="space-y-2">
-                            <Label htmlFor="from">From</Label>
-                            <div class="relative">
-                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
-                                <Input name="from" id="from" placeholder="New York (JFK)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                        <div class="relative space-y-2">
+                            <Label for="combo-input-from">From</Label>
+                            <div class="mb-0">
+                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-4.5 h-4 w-4 text-gray-400"></lucide-angular>
+                                <input 
+                                (click)="onFocusSearch(comboBoxStateFrom, $event)"
+                                type="text"
+                                id="combo-input-from"
+                                
+                                formControlName="from"
+                                (input)="onSearchAirport($event)"
+                                placeholder="New York (JFK)" 
+                                class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
                             </div>
+                            <ul
+                            id="combo-menu-from"
+                            role="listbox"
+                            aria-label="combo box options"
+                            [class.hidden]="comboBoxStateFrom()"
+                            class="w-full absolute hidden overflow-hidden bg-white border rounded-b-md shadow-md border-gray-100 border-t-0"
+                            >
+                            @for(airport of filteredairportList(); track airport.attributes; let index = $index){
+                                
+                                <li
+                                id="option-{{index}}"
+                                class="flex items-center p-3 text-sm cursor-pointer gap-4 text-base-600 hover:bg-base-50 hover:bg-gray-200"
+                                role="option"
+                                aria-selected="false"
+                                (click)="handleComboBoxFromClick($event)"
+                                
+                                >
+                                    <lucide-angular [img]="plane" class="size-4 text-gray-400"></lucide-angular>
+                                    <!-- use Pipe here -->
+                                    {{airport.attributes.name}}
+                                </li>
+                            }@empty {<li>There are no items.</li>}
+                            
+                            </ul>
                         </div>
     
                         <!-- {/* To */} -->
-                        <div class="space-y-2">
-                            <Label htmlFor="to">To</Label>
-                            <div class="relative">
-                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-1 h-4 w-4 text-gray-400"></lucide-angular>
-                                <Input name="to" id="to" placeholder="London (LHR)" class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full" />
+                        <div id="combo-box" class="relative space-y-2">
+                            <Label for="combo-input-to">To</Label>
+                            <div class="mb-0">
+                                <lucide-angular [img]="mapPin" class="absolute left-1.5 top-4.5 h-4 w-4 text-gray-400"></lucide-angular>
+                                <input
+                                    id="combo-input-to"
+                                    (click)="onFocusSearch(comboBoxStateTo, $event)"
+                                    formControlName="to"
+                                    placeholder="London (LHR)"
+                                    (input)="onSearchAirport($event)"
+                                    class="bg-gray-100 pl-10 rounded-md p-2 text-md border border-gray-300 w-full"
+                                    type="text" />
                             </div>
+                            <ul
+                            id="combo-menu-to"
+                            role="listbox"
+                            aria-label="combo box options"
+                            class="w-full absolute hidden overflow-hidden bg-white border rounded-b-md shadow-md border-gray-100 border-t-0"
+                            [class.hidden]="comboBoxStateTo()"
+                            >
+                            @for(airport of filteredairportList(); track airport.attributes; let index = $index){
+                                
+                                <li
+                                id="option-{{index}}"
+                                class="flex items-center p-3 text-sm cursor-pointer gap-4 text-base-600 hover:bg-base-50 hover:bg-gray-200"
+                                role="option"
+                                aria-selected="false"
+                                (click)="handleComboBoxToClick($event)"
+                                >
+                                    <lucide-angular [img]="plane" class="size-4 text-gray-400"></lucide-angular>
+                                    <!-- use Pipe here -->
+                                    {{airport.attributes.name}}
+                                </li>
+                            }@empty {<li>There are no items.</li>}
+                            </ul>
                         </div>
 
                         <!-- @if round trip here-->
@@ -62,7 +124,7 @@
                                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                         </svg>
                                     </div>
-                                    <input id="datepicker-range-start" name="start" type="text"
+                                    <input id="datepicker-range-start" formControlName="start" type="text" (changeDate)="handleStartDate($event)"
                                         class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
                                         placeholder="Select date start">
                                 </div>
@@ -75,7 +137,7 @@
                                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                         </svg>
                                     </div>
-                                    <input id="datepicker-range-end" name="end" type="text"
+                                    <input id="datepicker-range-end" formControlName="end" type="text" (changeDate)="handleEndDate($event)"
                                         class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
                                         placeholder="Select date end">
                                 </div>
@@ -106,13 +168,12 @@
                                     </Popover> -->
                             
                         </div>
-                        
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-3">
                         <div class="space-y-2">
                             <label for="passengerNumber">Passengers</label>
-                            <select name="passengerNumber" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="passengerNumber">
-                                <option selected="1">1 Passenger</option>
+                            <select formControlName="passengerNumber" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="passengerNumber">
+                                <option value="1">1 Passenger</option>
                                 <option value="2">2 Passengers</option>
                                 <option value="3">3 Passengers</option>
                                 <option value="4">4 Passengers</option>
@@ -121,11 +182,11 @@
                         </div>
                         <div class="space-y-2">
                             <label for="ticketClass">Class</label>
-                            <select name="ticketClass" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="ticketClass">
-                                <option selected="economy">Economy</option>
-                                <option value="premium">Premium Economy</option>
-                                <option value="business">Business</option>
-                                <option value="first">First Class</option>
+                            <select formControlName="ticketClass" class="max-h-10 bg-gray-100 text-popover-foreground w-full overflow-x-hidden overflow-y-auto rounded-md border shadow-md" id="ticketClass">
+                                <option value="Economy">Economy</option>
+                                <option value="Premium Economy">Premium Economy</option>
+                                <option value="Business">Business</option>
+                                <option value="First Class">First Class</option>
                             </select>
                         </div>
                         <div class="flex items-end space-y-2">
