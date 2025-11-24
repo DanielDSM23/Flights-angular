@@ -58,6 +58,7 @@ export class FlightSearchFormComponent implements OnInit {
 
   onSearchAirport(event: any){
     this.search.set(event.target.value);
+    
     this.airportService.getAirports().subscribe({
       next:(res)=>{
         const data = res.filter((airport : AirportInterface ) =>{
@@ -90,6 +91,7 @@ export class FlightSearchFormComponent implements OnInit {
       from:event.target.innerText
     })
     this.comboBoxStateFrom.set(true);
+    this.filteredairportList.set(this.airportList());
   }
 
   handleComboBoxToClick(event : any){
@@ -98,6 +100,7 @@ export class FlightSearchFormComponent implements OnInit {
       to:event.target.innerText
     })
     this.comboBoxStateTo.set(true);
+    this.filteredairportList.set(this.airportList());
   }
 
   handleStartDate(event : any){
