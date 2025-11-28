@@ -1,11 +1,12 @@
 export interface FlightInterface {
-    reference: string,
+    id: string,
     status: string,
     segments: SegmentInterface[],
     total: TotalInterface
 }
 
 export interface FlightInfoInterface {
+    airline: string,
     number: string,
     from: string,
     to: string,

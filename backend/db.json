@@ -214,14 +214,15 @@
 
     "flights": [
     {
-      "reference": "B30001",
+      "id": "B30001",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Emirates",
             "number": "AF276",
-            "from": "CDG",
-            "to": "HND",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T10:00:00Z",
             "arrive": "2026-01-01T23:00:00Z"
           }
@@ -233,14 +234,15 @@
       }
     },
     {
-      "reference": "B30002",
+      "id": "B30002",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Emirates",
             "number": "JL046",
-            "from": "CDG",
-            "to": "HND",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T11:30:00Z",
             "arrive": "2026-01-02T01:00:00Z"
           }
@@ -252,14 +254,15 @@
       }
     },
     {
-      "reference": "B30003",
+      "id": "B30003",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Emirates",
             "number": "NH216",
-            "from": "CDG",
-            "to": "HND",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T13:00:00Z",
             "arrive": "2026-01-02T04:00:00Z"
           }
@@ -271,13 +274,14 @@
       }
     },
     {
-      "reference": "B30004",
+      "id": "B30004",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Emirates",
             "number": "KE902",
-            "from": "CDG",
+            "from": "Paris Charles De Gaulle (CDG)",
             "to": "ICN",
             "depart": "2026-01-01T09:30:00Z",
             "arrive": "2026-01-01T18:00:00Z"
@@ -285,9 +289,10 @@
         },
         {
           "flight": {
+            "airline": "Thai Airways",
             "number": "KE711",
             "from": "ICN",
-            "to": "HND",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T20:00:00Z",
             "arrive": "2026-01-02T00:30:00Z"
           }
@@ -299,23 +304,25 @@
       }
     },
     {
-      "reference": "B30005",
+      "id": "B30005",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Cathay Pacific",
             "number": "AY1582",
-            "from": "CDG",
-            "to": "HEL",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Helsinki Vantaa Airport (HEL)",
             "depart": "2026-01-01T07:00:00Z",
             "arrive": "2026-01-01T11:30:00Z"
           }
         },
         {
           "flight": {
+            "airline": "Air France",
             "number": "AY073",
-            "from": "HEL",
-            "to": "HND",
+            "from": "Helsinki Vantaa Airport (HEL)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T13:00:00Z",
             "arrive": "2026-01-02T05:30:00Z"
           }
@@ -327,23 +334,25 @@
       }
     },
     {
-      "reference": "B30006",
+      "id": "B30006",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Qatar Airways",
             "number": "KL1224",
-            "from": "CDG",
-            "to": "AMS",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Amsterdam Airport Schiphol (AMS)",
             "depart": "2026-01-01T06:30:00Z",
             "arrive": "2026-01-01T08:00:00Z"
           }
         },
         {
           "flight": {
+            "airline": "Singapore Airline",
             "number": "KL861",
-            "from": "AMS",
-            "to": "HND",
+            "from": "Amsterdam Airport Schiphol (AMS)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T10:00:00Z",
             "arrive": "2026-01-02T05:00:00Z"
           }
@@ -355,23 +364,25 @@
       }
     },
     {
-      "reference": "B30007",
+      "id": "B30007",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "KLM",
             "number": "CX260",
-            "from": "CDG",
-            "to": "HKG",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Hong Kong International Airport (HKG)",
             "depart": "2026-01-01T12:00:00Z",
             "arrive": "2026-01-02T04:30:00Z"
           }
         },
         {
           "flight": {
+            "airline": "British Airways",
             "number": "CX542",
-            "from": "HKG",
-            "to": "HND",
+            "from": "Hong Kong International Airport (HKG)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-02T06:30:00Z",
             "arrive": "2026-01-02T11:30:00Z"
           }
@@ -383,23 +394,25 @@
       }
     },
     {
-      "reference": "B30008",
+      "id": "B30008",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "United Airlines",
             "number": "BA303",
-            "from": "CDG",
-            "to": "LHR",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "London Heathrow Airport (LHR)",
             "depart": "2026-01-01T08:30:00Z",
             "arrive": "2026-01-01T09:30:00Z"
           }
         },
         {
           "flight": {
+            "airline": "American Airlines",
             "number": "BA007",
-            "from": "LHR",
-            "to": "HND",
+            "from": "London Heathrow Airport (LHR)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-01T12:00:00Z",
             "arrive": "2026-01-02T09:00:00Z"
           }
@@ -411,23 +424,25 @@
       }
     },
     {
-      "reference": "B30009",
+      "id": "B30009",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Delta Airlines",
             "number": "EK076",
-            "from": "CDG",
-            "to": "DXB",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Dubai International Airport (DXB)",
             "depart": "2026-01-01T14:00:00Z",
             "arrive": "2026-01-01T23:00:00Z"
           }
         },
         {
           "flight": {
+            "airline": "Emirates",
             "number": "EK312",
-            "from": "DXB",
-            "to": "HND",
+            "from": "Dubai International Airport (DXB)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-02T02:30:00Z",
             "arrive": "2026-01-02T17:00:00Z"
           }
@@ -439,23 +454,25 @@
       }
     },
     {
-      "reference": "B30010",
+      "id": "B30010",
       "status": "confirmed",
       "segments": [
         {
           "flight": {
+            "airline": "Emirates",
             "number": "QR040",
-            "from": "CDG",
-            "to": "DOH",
+            "from": "Paris Charles De Gaulle (CDG)",
+            "to": "Hamad International Airport (DOH)",
             "depart": "2026-01-01T16:00:00Z",
             "arrive": "2026-01-01T23:30:00Z"
           }
         },
         {
           "flight": {
+            "airline": "Emirates",
             "number": "QR812",
-            "from": "DOH",
-            "to": "HND",
+            "from": "Hamad International Airport (DOH)",
+            "to": "Tokyo Haneda International Airport (HND)",
             "depart": "2026-01-02T02:00:00Z",
             "arrive": "2026-01-02T18:00:00Z"
           }
@@ -471,7 +488,7 @@
     {
       "id": "VHHH",
       "attributes": {
-        "name": "Hong Kong International Airport",
+        "name": "Hong Kong International Airport (HKG)",
         "code": "VHHH",
         "latitude": 22.308901,
         "longitude": 113.915001,
@@ -490,7 +507,7 @@
     {
       "id": "EHAM",
       "attributes": {
-        "name": "Amsterdam Airport Schiphol",
+        "name": "Amsterdam Airport Schiphol (AMS)",
         "code": "EHAM",
         "latitude": 52.308601,
         "longitude": 4.76389,
@@ -509,7 +526,7 @@
     {
       "id": "OTHH",
       "attributes": {
-        "name": "Hamad International Airport",
+        "name": "Hamad International Airport (DOH)",
         "code": "OTHH",
         "latitude": 25.273056,
         "longitude": 51.608056,
@@ -528,7 +545,7 @@
     {
       "id": "OMDB",
       "attributes": {
-        "name": "Dubai International Airport",
+        "name": "Dubai International Airport (DXB)",
         "code": "OMDB",
         "latitude": 25.2527999878,
         "longitude": 55.3643989563,
@@ -566,7 +583,7 @@
     {
       "id": "EFHK",
       "attributes": {
-        "name": "Helsinki Vantaa Airport",
+        "name": "Helsinki Vantaa Airport (HEL)",
         "code": "EFHK",
         "latitude": 60.318363,
         "longitude": 24.963341,
@@ -585,7 +602,7 @@
     {
       "id": "RJTT",
       "attributes": {
-        "name": "Tokyo Haneda International Airport",
+        "name": "Tokyo Haneda International Airport (HND)",
         "code": "RJTT",
         "latitude": 35.552299,
         "longitude": 139.779999,
@@ -694,7 +711,7 @@
     {
       "id": "LFPG",
       "attributes": {
-        "name": "Charles de Gaulle International Airport",
+        "name": "Paris Charles de Gaulle (CDG)",
         "code": "LFPG",
         "latitude": 49.012798,
         "longitude": 2.55,
@@ -713,7 +730,7 @@
     {
       "id": "LFPO",
       "attributes": {
-        "name": "Paris-Orly Airport",
+        "name": "Paris-Orly Airport (ORY)",
         "code": "LFPO",
         "latitude": 48.72333,
         "longitude": 2.37944,
@@ -1036,7 +1053,7 @@
     {
       "id": "EGLL",
       "attributes": {
-        "name": "London Heathrow Airport",
+        "name": "London Heathrow Airport (LHR)",
         "code": "EGLL",
         "latitude": 51.4706,
         "longitude": -0.461941,
@@ -1116,8 +1133,8 @@
       "status": "confirmed",
       "passengerName": "Caroline Menard",
       "flightNumber": "JL046",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T13:00:00Z",
       "arrivalTime": "2026-01-02T08:30:00Z",
       "price": 850.0,
@@ -1128,8 +1145,8 @@
       "status": "confirmed",
       "passengerName": "Olivier Rousset",
       "flightNumber": "AF276",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T10:30:00Z",
       "arrivalTime": "2026-01-02T06:00:00Z",
       "price": 910.0,
@@ -1140,8 +1157,8 @@
       "status": "confirmed",
       "passengerName": "Daniel Texier",
       "flightNumber": "NH216",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T14:15:00Z",
       "arrivalTime": "2026-01-02T09:30:00Z",
       "price": 880.0,
@@ -1152,8 +1169,8 @@
       "status": "confirmed",
       "passengerName": "G\u00e9rard Berger",
       "flightNumber": "JL048",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T17:30:00Z",
       "arrivalTime": "2026-01-02T12:30:00Z",
       "price": 930.0,
@@ -1164,8 +1181,8 @@
       "status": "confirmed",
       "passengerName": "Jacqueline Cordier",
       "flightNumber": "AF278",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T19:00:00Z",
       "arrivalTime": "2026-01-02T14:00:00Z",
       "price": 870.0,
@@ -1176,8 +1193,8 @@
       "status": "confirmed",
       "passengerName": "Louis Jacquet",
       "flightNumber": "NH218",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T09:00:00Z",
       "arrivalTime": "2026-01-02T04:00:00Z",
       "price": 895.0,
@@ -1188,8 +1205,8 @@
       "status": "confirmed",
       "passengerName": "Alice Duhamel",
       "flightNumber": "JL050",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T21:30:00Z",
       "arrivalTime": "2026-01-02T15:55:00Z",
       "price": 940.0,
@@ -1200,8 +1217,8 @@
       "status": "confirmed",
       "passengerName": "\u00c9lise Antoine",
       "flightNumber": "AF280",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T07:15:00Z",
       "arrivalTime": "2026-01-02T02:40:00Z",
       "price": 940.0,
@@ -1212,8 +1229,8 @@
       "status": "confirmed",
       "passengerName": "Marianne Chretien",
       "flightNumber": "NH220",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T23:10:00Z",
       "arrivalTime": "2026-01-02T18:20:00Z",
       "price": 975.0,
@@ -1224,8 +1241,8 @@
       "status": "confirmed",
       "passengerName": "Alice Laine",
       "flightNumber": "JL052",
-      "departureAirport": "CDG",
-      "arrivalAirport": "HND",
+      "departureAirport": "Paris Charles De Gaulle (CDG)",
+      "arrivalAirport": "Tokyo Haneda International Airport (HND)",
       "departureTime": "2026-01-01T15:25:00Z",
       "arrivalTime": "2026-01-02T10:50:00Z",
       "price": 975.0,

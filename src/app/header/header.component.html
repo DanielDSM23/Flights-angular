@@ -1,34 +1,24 @@
 <div class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
-            <!-- {/* Logo */} -->
             <div class="flex items-center gap-2">
                 <div class="bg-blue-600 p-2 rounded-lg">
                     <!-- <Plane class="h-6 w-6 text-white" /> -->
                 </div>
                 <span class="text-blue-600">SkyWings Travel</span>
             </div>
-            <!-- {/* Desktop Navigation */} -->
+           
             <nav class="hidden md:flex items-center gap-8">
-                <!-- <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Réserver un vol</a> -->
-                <!-- <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Hotels</a> -->
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Réserver un voyage</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Destinations</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Promos</a>
             </nav>
 
-            <!-- {/* Right Side Actions */} -->
             <div class="hidden md:flex items-center gap-4">
-                <Button variant="ghost" size="icon">
-                    <!-- <Heart class="h-5 w-5" /> -->
-                </Button>
-                <Button variant="ghost" size="icon">
-                <!-- <Bell class="h-5 w-5" /> -->
-                </Button>
-                <Button variant="outline" class="gap-2">
-                    <!-- <User class="h-4 w-4" /> -->
+                <button type="button" (click)="handleSignInClick()" class="flex gap-2 border bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-md py-1 px-3.5">
+                    <lucide-angular [img]="user" class="h-4 w-4 text-grey-100 mt-0.5"></lucide-angular>
                     Sign In
-                </Button>
+                </button>
             </div>
 
             <!-- {/* Mobile Menu Button */} -->

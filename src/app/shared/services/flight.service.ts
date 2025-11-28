@@ -13,5 +13,9 @@ export class FlightService {
     return this.http.get<FlightInterface[]>('http://localhost:3000/flights');
   }
 
+  public getFlightById(id :string){
+    return this.http.get<FlightInterface>(`http://localhost:3000/flights/${id}`)
+  }
+
   
 }

@@ -4,6 +4,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { authRedirectGuard } from './shared/guards/auth.redirect.guard';
 import { HomeComponent } from './home/home.component';
 import { FlightComponent } from './flight/flight.component';
+import { ReservationDetailsComponent } from './reservation-details/reservation-details.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,6 @@ export const routes: Routes = [
   },
   {
     path: 'flight-details/:reference',
-    component: HomeComponent
+    component: ReservationDetailsComponent
   }
 ];
