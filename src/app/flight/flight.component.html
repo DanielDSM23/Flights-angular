@@ -1,40 +1,19 @@
+<app-header></app-header>
 <div class="container mx-auto px-4 py-6">
-    <h3 class="text-2xl font-bold mb-6 text-gray-800">Liste des vols pour</h3> 
+    <h3 class="text-2xl font-bold mb-6 text-gray-800">Vols disponibles</h3>
+    <p class="text-gray-600">{{flights.length}} vols trouvés</p>
     <div class="space-y-4 max-w-3xl mx-auto">
         @for (flight of flights; track flight.id) {
-
-          <div class="bg-white rounded-lg shadow-md border border-gray-200" (click)="navigateToDetails(flight.id)">
-
-            <div class="flex items-center justify-between p-6 gap-20">
-              <div class="flex-1 space-y-4">
-                @for (stop of flight.segments; track $index) {          
-                  <div class="flex items-center justify-between">
-                    <div class="text-center">
-                      <p class="text-xl font-bold text-gray-700">{{ stop.flight.depart | date: 'HH:mm' }}</p>
-                      <p class="text-gray-600 text-sm">{{ stop.flight.from }}</p>
-                    </div>
-                    
-                    <div class="flex-1 text-center mx-4">
-                      <div class="relative flex items-center justify-center">
-                        <span class="absolute w-full h-0.5 bg-gray-300"></span>
-                      </div>
-                    </div>
-                    <div class="text-center">
-                      <p class="text-xl font-bold text-gray-700">{{ stop.flight.arrive | date: 'HH:mm' }}</p>
-                      <p class="text-gray-600 text-sm">{{ stop.flight.to }}</p>
-                    </div>
-                  </div>
-                }
-              </div>
-              <div class=" text-right">
-                <p class="text-xl font-bold text-gray-800">{{flight.total.amount}} €</p>
-                <button class="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-                  Réserver
-                </button>
-              </div>
-            
-            </div>
+          <div>
+              <app-flight-card
+              (cardClick)="navigateToDetails(flight.id)"
+              [flightInfo] ="flight.segments"
+              [total]="flight.total">
+            </app-flight-card>
           </div>
         }
-      </div>
+      @if (!flights) {
+        <p class="text-center text-gray-500">No flights found.</p>
+      }
     </div>
+  </div>

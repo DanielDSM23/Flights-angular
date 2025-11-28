@@ -5,6 +5,9 @@ import { AirportService } from '../shared/services/airport.service';
 import { AirportInterface } from '../models/airport.interface';
 import { FormControl, FormGroup, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { FlightInterface } from '../models/flight.interface';
+import { FlightService } from '../shared/services/flight.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flight-search-form',
@@ -37,7 +40,11 @@ export class FlightSearchFormComponent implements OnInit {
   //   ticketClass:  ["Economy",Validators.required],
   // });
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private flightService: FlightService,
+    private router: Router
+  ) {
     this.flightForm = this.formBuilder.group({
     from: ["",Validators.required],
     to: ["",Validators.required],
@@ -81,8 +88,22 @@ export class FlightSearchFormComponent implements OnInit {
     state.set(false);
   }
 
-  onSubmit() {    
-    console.warn(this.flightForm.value);
+  onSubmit() {
+    const formValues = this.flightForm.value;
+    
+    const origin = formValues.from;
+    const destination = formValues.to;
+
+    const departureDate = formValues.start;
+    let dateDeparture = "";
+
+    if (departureDate) {
+        const splittedDate = departureDate.split('/').reverse().join('-');
+        dateDeparture = new Date(splittedDate).toISOString().split('T')[0]; 
+    }
+
+    this.flightService.searchFlights(origin, destination, dateDeparture);
+    this.router.navigate(['/flights']);
   }
 
   handleComboBoxFromClick(event : any){

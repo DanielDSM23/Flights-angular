@@ -1,32 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, signal, WritableSignal } from '@angular/core';
 import { FlightInterface } from '../models/flight.interface';
 import { FlightService } from '../shared/services/flight.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { HeaderComponent } from "../header/header.component";
+import { FlightCardComponent } from "../flight-card/flight-card.component";
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-flight',
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent, FlightCardComponent],
   templateUrl: './flight.component.html',
   styleUrl: './flight.component.css'
 })
 
 export class FlightComponent implements OnInit {
+
   flights: FlightInterface[] = [];
 
   constructor(
     private flightsService: FlightService,
     private router: Router
-  ) { }
+  ) {
+  }
 
-    ngOnInit(): void {
-      this.flightsService.getFlights().subscribe((data: FlightInterface[]) => {
-        this.flights = data
-        console.log(data);
-      })
-    }
+  ngOnInit() {
+    this.flightsService.searchedFlights$.subscribe(data => {
+      this.flights = data;
+      console.log(data);
+    });
+  }
 
-    navigateToDetails(reference: string) {
-      this.router.navigate(['flight-details/', reference]);
-    }
+  navigateToDetails(reference: string) {
+    this.router.navigate(['flight-details/', reference]);
+  }
 }
