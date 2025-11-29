@@ -28,6 +28,8 @@ export class FlightSearchFormComponent implements OnInit {
   airportList = signal<AirportInterface[]>([]);
   filteredairportList = signal<AirportInterface[]>([]);
   search = signal('');
+  activeTab = signal('flights');
+
   flightForm : FormGroup;
   
   
@@ -54,9 +56,6 @@ export class FlightSearchFormComponent implements OnInit {
     ticketClass:  ["Economy",Validators.required],
     });
   }
-
-  
-  
 
   ngOnInit(): void {
     
@@ -134,5 +133,9 @@ export class FlightSearchFormComponent implements OnInit {
     this.flightForm.patchValue({
       end:event.target.value
     })
+  }
+
+  switchTab(tabName: string) {
+    this.activeTab.set(tabName);
   }
 }

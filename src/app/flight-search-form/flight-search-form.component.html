@@ -3,10 +3,15 @@
         <div class="w-full">
             <ul class="flex rounded-xl items-center text-sm font-medium text-center bg-gray-200 max-h-12 p-1" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-gray-900 bg-white hover:text-gray-700 border-transparent" data-tabs-inactive-classes="text-gray-900 hover:text-gray-700 border-transparent hover:border-gray-300" role="tablist">
                 <li class="grow" role="presentation">
-                    <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false" value="flights">Vols</button>
+                    <button (click)="switchTab('flights')" 
+                    [class.bg-white]="activeTab() === 'flights'"
+                    [class.shadow]="activeTab() === 'flights'"
+                    class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false" value="flights">Vols</button>
                 </li>
                 <li class="grow" role="presentation">
-                    <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" value="hotels">Destinations</button>
+                    <button (click)="switchTab('hotels')"
+                    [class.bg-white]="activeTab() === 'hotels'"
+                    [class.shadow]="activeTab() === 'hotels'"class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" value="hotels">Destinations</button>
                 </li>
                 <li class="grow" role="presentation">
                     <button class="w-full text-body text-sm px-5 py-1.5 rounded-full" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false" value="packages">Voyages</button>
@@ -14,7 +19,7 @@
             </ul>
         </div>
         <div id="default-styled-tab-content">
-            <div class="hidden p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab" value="flights">
+            <div [class.hidden]="activeTab() !== 'flights'" class="p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab" value="flights">
                 <div class="flex flex-wrap mb-4 gap-4">
                         <label>
                             <input type="radio" name="tripOption" id="roundTrip" class="peer hidden" value="Round Trip" checked/>
