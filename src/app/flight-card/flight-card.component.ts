@@ -1,4 +1,4 @@
-import { Component, Input, input, OnInit, signal, LOCALE_ID, Pipe } from '@angular/core';
+import { Component, Input, input, OnInit, signal, LOCALE_ID, Pipe, Output, EventEmitter } from '@angular/core';
 import { LucideAngularModule, Plane, Clock, Calendar } from 'lucide-angular';
 import { FlightInfoInterface, SegmentInterface, TotalInterface } from '../models/flight.interface';
 import { CommonModule, registerLocaleData } from '@angular/common';
@@ -24,6 +24,8 @@ export class FlightCardComponent implements OnInit {
   readonly plane = Plane;
   readonly clock = Clock;
   readonly calendar = Calendar;
+
+  @Output() cardClick = new EventEmitter<void>();
   @Input() flightInfo : SegmentInterface[] = [{
     flight: {
       airline: '',
@@ -50,18 +52,21 @@ export class FlightCardComponent implements OnInit {
   flightDuration = signal(0);
   arrivalTime = signal(new Date());
   arrivalAirport = signal("");
-  price = signal("");
+  price = signal(0);
   
   ngOnInit(): void {
     //initaliser les attribut du composant ici TODO
-    console.log(this.flightInfo)
     const segment = this.flightInfo[0]
+    const arrival = this.flightInfo[this.flightInfo.length - 1]
+    const total = this.total
     this.airline.set(segment.flight.airline)
     this.flightNumber.set(segment.flight.number)
     this.departureTime.set(segment.flight.depart)
     this.departureAirport.set(segment.flight.from)
-    this.arrivalTime.set(segment.flight.arrive)
-    this.arrivalAirport.set(segment.flight.to)
+    this.arrivalTime.set(arrival.flight.arrive)
+    this.arrivalAirport.set(arrival.flight.to)
+    this.price.set(total.amount)
+    this.stops.set(this.flightInfo.length - 1)
     // if(this.arrivalTime() && this.departureTime())
     // let diffDurationOfFlight = Math.abs(this.arrivalTime().getTime() - this.departureTime().getTime())  / 1000;
     // diffDurationOfFlight /= (60 * 60);
@@ -71,6 +76,10 @@ export class FlightCardComponent implements OnInit {
 
   onSelect(){
     console.log("Selected")
+  }
+
+  onCardClick() {
+    this.cardClick.emit();
   }
   
 }
