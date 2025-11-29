@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HeaderComponent } from "../header/header.component";
 import { FlightCardComponent } from "../flight-card/flight-card.component";
-import { map } from 'rxjs';
+import { FooterComponent } from "../footer/footer.component";
+import { LucideAngularModule, ArrowLeft } from 'lucide-angular';
 
 @Component({
   selector: 'app-flight',
-  imports: [CommonModule, HeaderComponent, FlightCardComponent],
+  imports: [CommonModule, HeaderComponent, FlightCardComponent, FooterComponent, LucideAngularModule],
   templateUrl: './flight.component.html',
   styleUrl: './flight.component.css'
 })
@@ -17,6 +18,8 @@ import { map } from 'rxjs';
 export class FlightComponent implements OnInit {
 
   flights: FlightInterface[] = [];
+
+  readonly arrowLeft = ArrowLeft;
 
   constructor(
     private flightsService: FlightService,
@@ -29,6 +32,10 @@ export class FlightComponent implements OnInit {
       this.flights = data;
       console.log(data);
     });
+  }
+
+  onBackToSearch() {
+    this.router.navigate(['/']);
   }
 
   navigateToDetails(reference: string) {
