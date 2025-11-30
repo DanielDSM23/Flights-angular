@@ -7,10 +7,11 @@ import { HeaderComponent } from "../header/header.component";
 import { FlightCardComponent } from "../flight-card/flight-card.component";
 import { FooterComponent } from "../footer/footer.component";
 import { LucideAngularModule, ArrowLeft } from 'lucide-angular';
+import { FlightRecapFormComponent } from '../flight-recap-form/flight-recap-form.component';
 
 @Component({
   selector: 'app-flight',
-  imports: [CommonModule, HeaderComponent, FlightCardComponent, FooterComponent, LucideAngularModule],
+  imports: [CommonModule, HeaderComponent, FlightCardComponent, FooterComponent, LucideAngularModule, FlightRecapFormComponent],
   templateUrl: './flight.component.html',
   styleUrl: './flight.component.css'
 })

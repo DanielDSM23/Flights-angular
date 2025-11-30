@@ -1,0 +1,26 @@
+<div class="mb-6">
+  <div
+    class="inline-flex flex-nowrap items-center gap-6 bg-white rounded-md border border-gray-200 shadow px-6 py-3 text-sm w-full"
+  >
+    <div>
+      <span class="text-gray-500 font-medium">From:</span>
+      <span class="font-semibold text-gray-900 ml-1">{{ from }}</span>
+    </div>
+
+    <div>→</div>
+
+    <div>
+      <span class="text-gray-500 font-medium">To:</span>
+      <span class="font-semibold text-gray-900 ml-1">{{ to }}</span>
+    </div>
+
+    <div>|</div>
+
+    <div>
+      <span class="text-gray-500 font-medium">Date:</span>
+      <span class="font-semibold text-gray-900 ml-1">
+        {{ date | date: 'MMMM d, y' }}
+      </span>
+    </div>
+  </div>
+</div>

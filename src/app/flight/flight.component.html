@@ -2,28 +2,35 @@
   <app-header></app-header>
   <div class="container mx-auto px-4 py-6">
     <button
-    (click)="onBackToSearch()"
-    class="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md transition-colors mb-4 focus:outline-none focus:ring-2 focus:ring-gray-200">
-    <lucide-angular [img]="arrowLeft" class="mr-2 h-4 w-4"></lucide-angular>
-    Modifier la recherche
-  </button>
-  <h2 class="text-2xl font-bold mb-2 text-gray-800">Vols disponibles</h2>
-  <p class="text-gray-600 mb-6">{{flights.length}} vols trouvés</p>
-  <div class="space-y-4 max-w-3xl mx-auto">
-    @for (flight of flights; track flight.id) {
+      (click)="onBackToSearch()"
+      class="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md transition-colors mb-4 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <lucide-angular [img]="arrowLeft" class="mr-2 h-4 w-4"></lucide-angular>
+      Modifier la recherche
+    </button>
+    <h2 class="text-2xl font-bold mb-2 text-gray-800">Vols disponibles</h2>
+    <p class="text-gray-600 mb-6">{{ flights.length }} vols trouvés</p>
+    <div class="space-y-4 max-w-3xl mx-auto">
+      <app-flight-recap-form
+        *ngIf="flights.length > 0"
+        [from]="flights[0].segments[0].flight.from"
+        [to]="flights[0].segments[0].flight.to"
+        [date]="flights[0].segments[0].flight.depart"
+      ></app-flight-recap-form>
+      @for (flight of flights; track flight.id) {
       <div>
         <app-flight-card
-        (cardClick)="navigateToDetails(flight.id)"
-        [flightInfo] ="flight.segments"
-        [total]="flight.total">
-      </app-flight-card>
+          (cardClick)="navigateToDetails(flight.id)"
+          [flightInfo]="flight.segments"
+          [total]="flight.total"
+        >
+        </app-flight-card>
+      </div>
+      } @if (!flights) {
+      <p class="text-center text-gray-500">Aucun vol trouvés</p>
+      }
     </div>
-  }
-  @if (!flights) {
-    <p class="text-center text-gray-500">Aucun vol trouvés</p>
-  }
-</div>
-</div>
+  </div>
 
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </div>
