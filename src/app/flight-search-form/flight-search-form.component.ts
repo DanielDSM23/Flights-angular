@@ -1,11 +1,9 @@
-import { Component, computed, EventEmitter, inject, OnInit, Signal, signal, WritableSignal } from '@angular/core';
-import { ComboBoxComponent } from '../comboBox/comboBox.component';
+import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { LucideAngularModule, MapPin, Plane } from 'lucide-angular';
 import { AirportService } from '../shared/services/airport.service';
 import { AirportInterface } from '../models/airport.interface';
-import { FormControl, FormGroup, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-import { NgIf } from '@angular/common';
-import { FlightInterface } from '../models/flight.interface';
+import { FormGroup, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+
 import { FlightService } from '../shared/services/flight.service';
 import { Router } from '@angular/router';
 

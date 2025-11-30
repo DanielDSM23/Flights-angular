@@ -28,7 +28,6 @@ export class FlightService {
 
   public searchFlights(departurePlace: string, arrivalPlace: string, departureDate: string, passengerNumber : number, returnDate : string): void {
     this.passengerNumber = passengerNumber;
-    console.log(passengerNumber)
     this.returnDate = returnDate;
     this.getFlights().subscribe(allFlights => {
       
@@ -48,16 +47,10 @@ export class FlightService {
         if (departureDate) {
             const realDepartureDate = new Date(firstSegment.depart);
             const askedDepartureDate = new Date(departureDate);
-
             const realDateString = realDepartureDate.toISOString().split('T')[0];
             const askedDepartureDateString = askedDepartureDate.toISOString().split('T')[0];
-
-            console.log(realDateString, askedDepartureDateString);
-
             matchDepartureDate = realDateString === askedDepartureDateString;
         }
-
-        console.log(matchDeparturePlace, matchArrivalPlace, matchDepartureDate);
         return matchDeparturePlace && matchArrivalPlace && matchDepartureDate;
       });
 

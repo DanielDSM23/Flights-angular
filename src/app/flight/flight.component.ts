@@ -27,7 +27,6 @@ export class FlightComponent implements OnInit {
   ) {
     this.flightsService.searchedFlights$.subscribe(data => {
       this.flights = data;
-      console.log(data);
     });
   }
 

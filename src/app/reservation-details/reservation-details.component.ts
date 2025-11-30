@@ -10,6 +10,8 @@ import { ReservationDetailPaymentComponent } from '../reservation-detail-payment
 import { SegmentInterface,FlightInfoInterface } from '../models/flight.interface';
 import { LucideAngularModule, User, Calendar } from 'lucide-angular';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -40,7 +42,7 @@ export class ReservationDetailsComponent implements OnInit {
     amount: 0,
     currency: ''
   });
-
+  private router = inject(Router);
   passengersArray = signal(this.passengerCounter(this.service.passengerNumber));
   passengerNumber = signal(1);
 
@@ -72,9 +74,9 @@ export class ReservationDetailsComponent implements OnInit {
   returnArrivalDate = signal(new Date)
   travelTime = signal(0);
   passengerForm : FormGroup;
+  
 
-
-  constructor(private formBuilder: FormBuilder,) {
+  constructor(private formBuilder: FormBuilder,private location: Location) {
     this.route.params.subscribe(params => {
       this.OutboundFlightId.set(params['reference']);
     });
@@ -95,7 +97,6 @@ export class ReservationDetailsComponent implements OnInit {
   
   ngOnInit(): void {
     this.passengersArray.set(this.passengerCounter(this.service.passengerNumber));
-    console.log(this.passengersArray().length)
     this.passengerNumber.set(this.passengersArray().length);
   }
 
@@ -192,7 +193,7 @@ export class ReservationDetailsComponent implements OnInit {
   }
 
   onBackToResults(){
-    console.log("back");
+    this.location.back();
   }
 
   onBagPriceChange(event : number){
