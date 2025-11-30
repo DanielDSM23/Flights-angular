@@ -65,9 +65,9 @@ export class ReservationDetailsComponent implements OnInit {
       currency: this.total().currency
   });
 
-  BagPrice = signal(0)
-  MealPrice = signal(0)
-  SeatPrice = signal(0)
+  bagNumber = signal(0)
+  mealPrice = signal(0)
+  seatPrice = signal(0)
   returnDepartureDate = signal(new Date(this.service.returnDate));
   returnArrivalDate = signal(new Date)
   travelTime = signal(0);
@@ -121,13 +121,34 @@ export class ReservationDetailsComponent implements OnInit {
     };
     
       //mapping outbound data to return flight data
-      const airlineName = sengmentArray[0].flight.airline
-      const flightNumber = sengmentArray[0].flight.number
-      const flightFrom = sengmentArray[0].flight.to
-      const flightTo = sengmentArray[0].flight.from
-      const flightDepart = returnDate;
-      const flightArrive = new Date(flightDepart.getTime() + this.travelTime());
-
+      let airlineName= "";
+      let flightNumber = "";
+      let flightFrom = "";
+      let flightTo = "";
+      let flightArrive = new Date;
+      let flightDepart = new Date;
+      
+      for(let i =0; i<sengmentArray.length;i++){
+        flightDepart = returnDate;
+        flightArrive = new Date(flightDepart.getTime() + this.travelTime());
+        if(sengmentArray.length == 1){
+          airlineName = sengmentArray[i].flight.airline
+          flightNumber = sengmentArray[i].flight.number
+          flightFrom = sengmentArray[i].flight.to
+          flightTo = sengmentArray[i].flight.from
+          
+        }else{
+          if(i == 0){
+            airlineName = sengmentArray[i].flight.airline
+            flightNumber = sengmentArray[i].flight.number
+            flightTo = sengmentArray[i].flight.from
+          }
+          if(i == sengmentArray.length-1){
+            flightFrom = sengmentArray[i].flight.to
+          }
+        }
+    }
+      
       flightInfo["airline"] = airlineName
       flightInfo["number"] = flightNumber
       flightInfo["from"] = flightFrom
@@ -175,17 +196,14 @@ export class ReservationDetailsComponent implements OnInit {
   }
 
   onBagPriceChange(event : number){
-    console.log(event)
-    this.BagPrice.set(event)
+    this.bagNumber.set(event)
   }
 
   onMealPriceChange(event : number){
-    console.log(event)
-    this.MealPrice.set(event)
+    this.mealPrice.set(event)
   }
 
   onSeatPriceChange(event : number){
-    console.log(event)
-    this.SeatPrice.set(event)
+    this.seatPrice.set(event)
   }
 }

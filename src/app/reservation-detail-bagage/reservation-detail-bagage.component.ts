@@ -37,7 +37,7 @@ export class ReservationDetailBagageComponent {
 
   onAddBagage(){
     this.checkedBags.set(this.checkedBags()+1);
-    this.bagPriceOutput.emit(this.checkedBags()*this.bagPrice());
+    this.bagPriceOutput.emit(this.checkedBags());
   }
 
   onSubstractBagage(){
@@ -45,14 +45,23 @@ export class ReservationDetailBagageComponent {
       return;
     }
     this.checkedBags.set(this.checkedBags()-1);
-    this.bagPriceOutput.emit(this.checkedBags()*this.bagPrice());
+    this.bagPriceOutput.emit(this.checkedBags());
   }
 
-  onMealChecked(){
+  onMealChecked(event : any){
+    console.log(event)
+    if(!event.target.checked){
+      this.mealPriceOutput.emit(0)
+      return;
+    }
     this.mealPriceOutput.emit(this.mealPrice())
   }
 
-  onSeatChecked(){
+  onSeatChecked(event: any){
+    if(!event.target.checked){
+      this.seatPriceOutput.emit(0)
+      return;
+    }
     this.seatPriceOutput.emit(this.seatPrice())
   }
 }

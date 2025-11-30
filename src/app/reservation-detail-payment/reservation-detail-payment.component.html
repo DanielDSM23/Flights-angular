@@ -5,39 +5,39 @@
         <div class="space-y-3 mb-6">
             <div class="flex justify-between text-sm">
                 <span class="text-gray-600">
-                    Vol aller ({{passengers()}}{{" "}}
-                    {{passengers() === 1 ? "passenger" : "passengers"}})
+                    Vol aller ({{passengersNumber}}{{" "}}
+                    {{passengersNumber === 1 ? "passenger" : "passengers"}})
                 </span>
-                <span>${{basePrice()}}</span>
+                <span>${{basePrice()*passengersNumber}}</span>
             </div>
             <div class="flex justify-between text-sm">
                 <span class="text-gray-600">
-                    Vol retour ({{passengers()}} {{" "}}
-                    {{passengers() === 1 ? "passenger" : "passengers"}})
+                    Vol retour ({{passengersNumber}} {{" "}}
+                    {{passengersNumber === 1 ? "passenger" : "passengers"}})
                 </span>
-                <span>${{returnPrice()}}</span>
+                <span>${{returnPrice()*passengersNumber}}</span>
             </div>
 
-            @if(bagPrice() > 0){
+            @if(bagageNumber > 0){
                 <div class="flex justify-between text-sm">
                     <span class="text-gray-600">
-                        Bagage supplémentaire ({{checkedBags()}})
+                        Bagage supplémentaire ({{bagageNumber}})
                     </span>
-                    <span>${{(checkedBags() * bagPrice())}}</span>
+                    <span>${{bagBasePrice() * bagageNumber}}</span>
                 </div>
             }
             
-            @if(mealPrice()>0){
+            @if(mealPriceInput>0){
                 <div class="flex justify-between text-sm">
                     <span class="text-gray-600">Repas durant le vol</span>
-                    <span>${{(mealPrice() * passengers())}}</span>
+                    <span>${{mealPriceInput}} * {{passengersNumber}}</span>
                 </div>
             }
 
-            @if(seatPrice()>0){
+            @if(seatPriceInput>0){
                 <div class="flex justify-between text-sm">
                     <span class="text-gray-600">Sélection de siège</span>
-                    <span>${{(seatPrice() * passengers())}}</span>
+                    <span>${{seatPriceInput}} * {{passengersNumber}}</span>
                 </div>
             }
             <div class="flex justify-between text-sm">

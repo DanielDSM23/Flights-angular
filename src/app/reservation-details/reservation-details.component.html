@@ -161,7 +161,7 @@
                     <app-reservation-detail-bagage (bagPriceOutput)="onBagPriceChange($event)" (mealPriceOutput)="onMealPriceChange($event)" (seatPriceOutput)="onSeatPriceChange($event)"></app-reservation-detail-bagage>
                 </div>
                 @if(total().amount != 0){
-                    <app-reservation-detail-payment [bagagePrice]="BagPrice()" [mealPriceInput]="MealPrice()" [seatPriceInput]="SeatPrice()" [passengersNumber]="passengerNumber()" [flightPriceAmount]="total().amount" ></app-reservation-detail-payment>
+                    <app-reservation-detail-payment [bagageNumber]="bagNumber()" [mealPriceInput]="mealPrice()" [seatPriceInput]="seatPrice()" [passengersNumber]="passengerNumber()" [flightPriceAmount]="total().amount" ></app-reservation-detail-payment>
                 }
             </div>
         </div>

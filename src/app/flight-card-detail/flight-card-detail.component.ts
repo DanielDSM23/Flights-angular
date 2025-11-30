@@ -52,14 +52,28 @@ export class FlightCardDetailComponent {
   price = signal("");
   
   ngOnInit(): void {
-    //initaliser les attribut du composant ici TODO
-    const segment = this.flightInfo[0]
-    this.airline.set(segment.flight.airline)
-    this.flightNumber.set(segment.flight.number)
-    this.departureTime.set(segment.flight.depart)
-    this.departureAirport.set(segment.flight.from)
-    this.arrivalTime.set(segment.flight.arrive)
-    this.arrivalAirport.set(segment.flight.to)
+    for(let i =0; i<this.flightInfo.length;i++){
+      let segment = this.flightInfo[i]
+      if(this.flightInfo.length == 1){
+        this.airline.set(segment.flight.airline)
+        this.flightNumber.set(segment.flight.number)
+        this.departureTime.set(segment.flight.depart)
+        this.departureAirport.set(segment.flight.from)
+        this.arrivalTime.set(segment.flight.arrive)
+        this.arrivalAirport.set(segment.flight.to)
+      }else{
+        if(i == 0){
+          this.airline.set(segment.flight.airline)
+          this.flightNumber.set(segment.flight.number)
+          this.departureTime.set(segment.flight.depart)
+          this.departureAirport.set(segment.flight.from)
+        }
+        if(i == this.flightInfo.length-1){
+          this.arrivalTime.set(segment.flight.arrive)
+          this.arrivalAirport.set(segment.flight.to)
+        }
+      }
+    }
 
     if(this.arrivalTime() && this.departureTime()){
       let diffDurationOfFlight = Math.abs(new Date(this.arrivalTime()).getTime() - new Date(this.departureTime()).getTime())  / 1000;
