@@ -3,6 +3,7 @@ import { LucideAngularModule, Plane, Clock, Calendar } from 'lucide-angular';
 import { FlightInfoInterface, SegmentInterface, TotalInterface } from '../models/flight.interface';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { CurrencyConverterPipe } from '../shared/pipes/currency-converter.pipe';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -10,12 +11,13 @@ registerLocaleData(localeFr, 'fr');
   selector: 'app-flight-card',
   imports: [
     LucideAngularModule,
-    CommonModule
+    CommonModule,
+    CurrencyConverterPipe
 
   ],
   providers: [
     // 🔑 Set the global locale to 'fr'
-    { provide: LOCALE_ID, useValue: 'fr' } 
+    { provide: LOCALE_ID, useValue: 'fr' }
   ],
   templateUrl: './flight-card.component.html',
   styleUrl: './flight-card.component.css'
@@ -53,7 +55,7 @@ export class FlightCardComponent implements OnInit {
   arrivalTime = signal(new Date());
   arrivalAirport = signal("");
   price = signal(0);
-  
+
   ngOnInit(): void {
     //initaliser les attribut du composant ici TODO
     const segment = this.flightInfo[0]
@@ -81,5 +83,5 @@ export class FlightCardComponent implements OnInit {
   onCardClick() {
     this.cardClick.emit();
   }
-  
+
 }

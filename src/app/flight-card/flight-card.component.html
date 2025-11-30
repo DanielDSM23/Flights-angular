@@ -41,9 +41,9 @@
                 <lucide-angular [img]="clock" class="size-4 text-gray-600 mt-0.5"></lucide-angular>
                 <span>{{flightDuration()}}</span>
             </div>
-            @if(stops() > 0){ 
+            @if(stops() > 0){
             <p class="text-xs text-gray-500 mt-1">
-              {{stops()}}  {{ stops() === 1 ? "stop" : "stops"}} 
+              {{stops()}}  {{ stops() === 1 ? "stop" : "stops"}}
             </p>
             }
         </div>
@@ -59,7 +59,7 @@
     <div class="flex items-center justify-between pt-4 border-t">
         <div>
             <p class="text-sm text-gray-500">Price per person</p>
-            <p class="text-blue-600">${{price()}}</p>
+            <p class="text-blue-600">{{price() | currencyConverter:'EUR':'€'}}</p>
         </div>
         <button class="bg-gray-900 hover:bg-black text-white text-sm font-semibold py-2.5 px-5 rounded-md transition-colors duration-200 shadow-sm hover:shadow-md flex items-center gap-2" (click)="onSelect()">Select Flight</button>
     </div>
