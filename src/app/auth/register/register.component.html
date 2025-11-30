@@ -53,6 +53,9 @@
           <div *ngIf="registerForm.get('password')?.errors?.['minlength']">
             Le mot de passe doit contenir au moins 6 caractères.
           </div>
+          <div *ngIf="registerForm.get('password')?.errors?.['commonPassword']">
+            Le mot de passe n'est pas assez securisé
+          </div>
         </div>
       </div>
       <div class="mb-6">

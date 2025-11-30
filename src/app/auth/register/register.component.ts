@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { AuthService } from '../../shared/services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../../models/user.model';
+import { commonPasswordValidator } from '../../shared/validators/common-password.validator';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +24,7 @@ export class RegisterComponent {
     firstname: new FormControl('', Validators.required),
     lastname: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6), commonPasswordValidator]),
     passwordcheck: new FormControl('', [Validators.required, Validators.minLength(6)]),
   })
 
