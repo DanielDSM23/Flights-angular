@@ -12,6 +12,10 @@ export class FlightService {
 
   public searchedFlights$ = this._searchedFlights.asObservable();
 
+  public passengerNumber = 0;
+
+  public returnDate = "";
+
   constructor(private http: HttpClient) { }
 
   public getFlights() {
@@ -22,8 +26,10 @@ export class FlightService {
     return this.http.get<FlightInterface>(`http://localhost:3000/flights/${id}`)
   }
 
-  public searchFlights(departurePlace: string, arrivalPlace: string, departureDate: string): void {
-    
+  public searchFlights(departurePlace: string, arrivalPlace: string, departureDate: string, passengerNumber : number, returnDate : string): void {
+    this.passengerNumber = passengerNumber;
+    console.log(passengerNumber)
+    this.returnDate = returnDate;
     this.getFlights().subscribe(allFlights => {
       
       const filtered = allFlights.filter(flight => {

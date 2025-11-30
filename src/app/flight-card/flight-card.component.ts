@@ -16,8 +16,7 @@ registerLocaleData(localeFr, 'fr');
 
   ],
   providers: [
-    // 🔑 Set the global locale to 'fr'
-    { provide: LOCALE_ID, useValue: 'fr' }
+    { provide: LOCALE_ID, useValue: 'fr' } 
   ],
   templateUrl: './flight-card.component.html',
   styleUrl: './flight-card.component.css'
@@ -44,6 +43,7 @@ export class FlightCardComponent implements OnInit {
     currency: ''
   }
   @Input() status = ""
+
   airline = signal("");
   flightNumber = signal("");
   flightClass = signal("");

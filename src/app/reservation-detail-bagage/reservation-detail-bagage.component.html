@@ -1,0 +1,71 @@
+<section class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="mb-6">Enhance Your Journey</h2>
+    <div class="space-y-4">
+        <!-- {/* Checked Baggage */} -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+            <div class="flex items-start justify-between mb-2">
+                <div class="flex items-start gap-3 flex-1">
+                    <div class="bg-blue-100 p-2 rounded-lg">
+                        <lucide-angular [img]="luggage" class="size-4 text-blue-600"></lucide-angular>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="mb-1">Checked Baggage</h3>
+                        <p class="text-sm text-gray-600">
+                            Add checked bags for {{bagPrice()}} each
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50" (click)="onSubstractBagage()">
+                        <lucide-angular [img]="minus" class="size-4"></lucide-angular>
+                    </button>
+                    <span class="w-8 text-center">{{checkedBags()}}</span>
+                    <button class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50" (click)="onAddBagage()">
+                        <lucide-angular [img]="plus" class="size-4"></lucide-angular>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- {/* Meal Selection */} -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div class="flex items-start gap-3 flex-1">
+                    <div class="bg-green-100 p-2 rounded-lg">
+                        <lucide-angular [img]="utensilsCrossed" class="size-4 text-green-600"></lucide-angular>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="mb-1">In-Flight Meals</h3>
+                        <p class="text-sm text-gray-600">
+                            Pre-order meals for {{mealPrice()}} per person
+                        </p>
+                    </div>
+                </div>
+                <label class="flex items-center gap-2">
+                    <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500" (change)="onMealChecked()" />
+                </label>
+            </div>
+        </div>
+
+        <!-- {/* Seat Selection */} -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+            <div class="flex items-start justify-between">
+                <div class="flex items-start gap-3 flex-1">
+                    <div class="bg-purple-100 p-2 rounded-lg">
+                        <!-- <Plane class="h-5 w-5 " /> -->
+                        <lucide-angular [img]="plane" class="size-4 text-purple-600"></lucide-angular>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="mb-1">Preferred Seat Selection</h3>
+                        <p class="text-sm text-gray-600">
+                            Choose your seats for {{seatPrice()}} per person
+                        </p>
+                    </div>
+                </div>
+                <label class="flex items-center gap-2">
+                    <input type="checkbox" (change)="onSeatChecked()" class="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500" />
+                </label>
+            </div>
+        </div>
+    </div>
+</section>

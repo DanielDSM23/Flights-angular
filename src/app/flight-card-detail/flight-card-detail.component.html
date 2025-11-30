@@ -1,0 +1,56 @@
+<div class="p-4 bg-gray-50 rounded-lg">
+    <!-- {/* Airline Info */} -->
+    <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <lucide-angular [img]="plane" class="size-6 text-blue-600"></lucide-angular>
+            </div>
+            <div>
+                <p class="text-gray-900">{{airline()}}</p>
+                <p class="text-sm text-gray-500">{{flightNumber()}}</p>
+            </div>
+        </div>
+        <div class="text-right">
+            <p class="text-gray-800 text-sm mt-1 border-transparent bg-secondary rounded-lg px-3 py-1">{{flightClass()}}</p>
+        </div>
+    </div>
+
+    <!-- {/* Flight Details */} -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <!-- {/* Departure */} -->
+        <div>
+            <p class="text-gray-900">{{departureTime() | date: 'shortTime'}}</p>
+            <p class="text-sm text-gray-500">{{departureAirport()}}</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+                <lucide-angular [img]="calendar" class="size-3"></lucide-angular>
+                <span>{{departureTime() | date:'mediumDate':'':'fr'}}</span>
+            </div>
+        </div>
+
+        <!-- {/* Duration & Stops */} -->
+        <div class="flex flex-col items-center justify-center">
+            <div class="w-full border-t-2 border-gray-300 relative">
+                <lucide-angular [img]="plane" class="size-4 text-gray-400 absolute -top-1 left-1/2 -translate-x-1/2 bg-gray-50"></lucide-angular>
+            </div>
+            <div class="flex items-center gap-1 mt-2 text-sm text-gray-600">
+                <lucide-angular [img]="clock" class="size-4 text-gray-600"></lucide-angular>
+                <span>{{flightDuration()}}</span>
+            </div>
+            @if(stops() > 0){ 
+            <p class="text-xs text-gray-500 mt-1">
+              {{stops()}}  {{ stops() === 1 ? "stop" : "stops"}} 
+            </p>
+            }
+        </div>
+
+        <!-- {/* Arrival */} -->
+        <div class="text-right">
+            <p class="text-gray-900">{{arrivalTime() | date: 'shortTime' }}</p>
+            <p class="text-sm text-gray-500">{{arrivalAirport()}}</p>
+            <div class="flex items-center justify-end gap-1 text-xs text-gray-400">
+                <lucide-angular [img]="calendar" class="size-3"></lucide-angular>
+                <span>{{arrivalTime() | date:'mediumDate':'':'fr'}}</span>
+            </div>
+        </div>
+    </div>
+</div>

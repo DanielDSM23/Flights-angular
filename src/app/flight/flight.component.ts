@@ -19,20 +19,20 @@ import { FlightRecapFormComponent } from '../flight-recap-form/flight-recap-form
 export class FlightComponent implements OnInit {
 
   flights: FlightInterface[] = [];
-
   readonly arrowLeft = ArrowLeft;
 
   constructor(
     private flightsService: FlightService,
     private router: Router
   ) {
-  }
-
-  ngOnInit() {
     this.flightsService.searchedFlights$.subscribe(data => {
       this.flights = data;
       console.log(data);
     });
+  }
+
+  ngOnInit() {
+    
   }
 
   onBackToSearch() {

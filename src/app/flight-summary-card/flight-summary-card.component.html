@@ -1,0 +1,80 @@
+<div class="lg:col-span-1">
+    <div class="bg-white rounded-lg shadow-md p-6 sticky top-4">
+        <h3 class="mb-6">Price Summary</h3>
+
+        <div class="space-y-3 mb-6">
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">
+                    Outbound Flight ({passengers}{" "}
+                    {passengers === 1 ? "passenger" : "passengers"})
+                </span>
+                <span>${basePrice.toLocaleString()}</span>
+            </div>
+            {returnFlight && (
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">
+                    Return Flight ({passengers}{" "}
+                    {passengers === 1 ? "passenger" : "passengers"})
+                </span>
+                <span>${returnPrice.toLocaleString()}</span>
+            </div>
+            )}
+            {checkedBags > 0 && (
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">
+                    Checked Baggage (×{checkedBags})
+                </span>
+                <span>${(checkedBags * bagPrice).toLocaleString()}</span>
+            </div>
+            )}
+            {mealSelection && (
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">In-Flight Meals</span>
+                <span>${(mealPrice * passengers).toLocaleString()}</span>
+            </div>
+            )}
+            {seatSelection && (
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">Seat Selection</span>
+                <span>${(seatPrice * passengers).toLocaleString()}</span>
+            </div>
+            )}
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-600">Taxes & Fees</span>
+                <span>${taxes.toFixed(2)}</span>
+            </div>
+        </div>
+
+        <div class="pt-4 border-t">
+            <div class="flex justify-between mb-6">
+                <span>Total Price</span>
+                <span class="text-blue-600">
+                    ${totalPrice.toFixed(2)}
+                </span>
+            </div>
+
+            <Button class="w-full mb-4">Continue to Payment</Button>
+
+            <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
+                <Shield class="h-4 w-4" />
+                <span>Secure payment processing</span>
+            </div>
+        </div>
+
+        {/* Benefits */}
+        <div class="mt-6 pt-6 border-t space-y-3">
+            <div class="flex items-start gap-2 text-xs text-gray-600">
+                <div class="w-1 h-1 rounded-full bg-blue-600 mt-1.5"></div>
+                <span>Free cancellation within 24 hours</span>
+            </div>
+            <div class="flex items-start gap-2 text-xs text-gray-600">
+                <div class="w-1 h-1 rounded-full bg-blue-600 mt-1.5"></div>
+                <span>Price lock guarantee</span>
+            </div>
+            <div class="flex items-start gap-2 text-xs text-gray-600">
+                <div class="w-1 h-1 rounded-full bg-blue-600 mt-1.5"></div>
+                <span>24/7 customer support</span>
+            </div>
+        </div>
+    </div>
+</div>

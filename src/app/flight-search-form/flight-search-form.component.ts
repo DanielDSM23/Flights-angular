@@ -31,6 +31,7 @@ export class FlightSearchFormComponent implements OnInit {
   activeTab = signal('flights');
 
   flightForm : FormGroup;
+  private router = inject(Router);
   
   
   // flightFormGroupObject = signal({
@@ -44,8 +45,7 @@ export class FlightSearchFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private flightService: FlightService,
-    private router: Router
+    private flightService: FlightService
   ) {
     this.flightForm = this.formBuilder.group({
     from: ["",Validators.required],
@@ -94,14 +94,22 @@ export class FlightSearchFormComponent implements OnInit {
     const destination = formValues.to;
 
     const departureDate = formValues.start;
+    const formReturnDate = formValues.end;
     let dateDeparture = "";
+    let returnDateValue = "";
+    const numberOfPassenger = formValues.passengerNumber;
+
+    if (formReturnDate) {
+        const splittedDate = formReturnDate.split('/').reverse().join('-');
+        returnDateValue = new Date(splittedDate).toISOString().split('T')[0]; 
+    }
 
     if (departureDate) {
         const splittedDate = departureDate.split('/').reverse().join('-');
         dateDeparture = new Date(splittedDate).toISOString().split('T')[0]; 
     }
 
-    this.flightService.searchFlights(origin, destination, dateDeparture);
+    this.flightService.searchFlights(origin, destination, dateDeparture, numberOfPassenger, returnDateValue);
     this.router.navigate(['/flights']);
   }
 

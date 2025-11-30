@@ -9,6 +9,8 @@ export class AirportService {
 
   constructor(private http: HttpClient) { }
 
+  public airportTaxes = 120;
+
   public getAirports() {
       return this.http.get<AirportInterface[]>('http://localhost:3000/airport');
   }

@@ -3,7 +3,7 @@
     <div class="flex-1">
         <div class="bg-white shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                <div class="inline">
+                <div class="flex items-center justify-between">
                     <button (click)="onBackToResults()" class="text-blue-600 hover:underline text-sm">
                         ← Retour à la page résultat
                     </button>
@@ -48,84 +48,123 @@
                             <div class="flex items-center gap-2 mb-4">
                                  <div class="border-transparent bg-secondary hover:bg-secondary/90 px-2.5 py-1 rounded-lg text-xs text-black font-medium">Outbound</div>
                                 <span class="text-sm text-gray-500">
-                                    <!-- {{ouboundFlightInfo.date}} -->
+                                    {{ouboundFlightInfo()[0].flight.depart | date:'longDate':'':'fr'}}
                                 </span>
                             </div>
                             @if(ouboundFlightInfo()[0].flight.airline != ""){
-                                <app-flight-card [total]="total()" [status]="status()" [id]="ref()" [flightInfo]="ouboundFlightInfo()"></app-flight-card>
+                                <app-flight-card-detail (traveltime)="onTravelTimeChange($event)" [status]="status()" [id]="ref()" [flightInfo]="ouboundFlightInfo()"></app-flight-card-detail>
                             }
                         </div>
     
                         <!-- {/* Return Flight */} -->
-                        <!-- @if(returnFlight){ -->
+                        @if(hasReturnFlight() && returnFlightInfo().length != 0 && isValidDate(returnFlightInfo()[0].flight.arrive)){
                         <div>
                             <div class="flex items-center gap-2 mb-4">
                                 
                                 <div class="border-transparent bg-secondary hover:bg-secondary/90 px-2.5 py-1 rounded-lg text-xs text-black font-medium">Return</div>
                                 <span class="text-sm text-gray-500">
-                                    <!-- {{returnFlight.date}} -->
+                                    
+                                    {{returnFlightInfo()[0].flight.arrive | date:'longDate':'':'fr'}}
                                 </span>
                             </div>
-                            <app-flight-card [total]="total()" [status]="status()" [id]="ref()" [flightInfo]="ouboundFlightInfo()"></app-flight-card>
-                            <!-- <FlightSummaryCard flight={returnFlight} /> -->
+                            @if(returnFlightInfo()[0].flight.airline != ""){
+                                <app-flight-card-detail (traveltime)="onTravelTimeChange($event)" [status]="status()" [id]="ref()" [flightInfo]="returnFlightInfo()"></app-flight-card-detail>
+                            }
                         </div>
-                        <!-- } -->
+                        }
     
                     </section>
     
                     <!-- {/* Passenger Information */} -->
                     <section class="bg-white rounded-lg shadow-md p-6">
                         <h2 class="mb-6">Passenger Information</h2>
-                        <!-- {passengerDetails.map((passenger, index) => ( -->
-                        <div key={index} class="mb-8 last:mb-0">
+                        <div class="mb-8 last:mb-0">
                             <h3 class="mb-4">
-                                <!-- Passenger {index + 1}
-                                    {index === 0 && ( -->
                                 <span class="text-sm text-gray-500 ml-2">
                                     (Lead Passenger)
                                 </span>
-                                <!-- )} -->
                             </h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm text-gray-700 mb-1">
-                                        First Name *
-                                    </label>
-                                    <div class="relative">
-                                        <!-- <User class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> -->
-                                        <input type="text" value={passenger.firstName}
-                                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            placeholder="John" />
+                            
+                            <form [formGroup]="passengerForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                @for(passenger of passengersArray(); track passenger;){
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                           {{passenger}} First Name *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="user" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="text"
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                placeholder="John" formControlName="passengerFirstName" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm text-gray-700 mb-1">
-                                        Last Name *
-                                    </label>
-                                    <div class="relative">
-                                        <!-- <User class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> -->
-                                        <input type="text" value={passenger.lastName}
-                                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            placeholder="Doe" />
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                            {{passenger}} Last Name *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="user" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="text"
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Doe" formControlName="passengerLastName"/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm text-gray-700 mb-1">
-                                        Date of Birth *
-                                    </label>
-                                    <div class="relative">
-                                        <!-- <Calendar class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" /> -->
-                                        <input type="date" value={passenger.dateOfBirth}
-                                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                            {{passenger}} Date of Birth *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="calendar" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="date" value={passenger.dateOfBirth}
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" formControlName="passengerBirthDate" />
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                }
+                                @empty {
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                            First Name *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="user" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="text"
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                placeholder="John" formControlName="passengerFirstName" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                            Last Name *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="user" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="text"
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Doe" formControlName="passengerLastName"/>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm text-gray-700 mb-1">
+                                            Date of Birth *
+                                        </label>
+                                        <div class="relative">
+                                            <lucide-angular [img]="calendar" class="absolute left-2 top-1/2 -translate-y-1/2 size-4 text-gray-400"></lucide-angular>
+                                            <input type="date" value={passenger.dateOfBirth}
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" formControlName="passengerBirthDate" />
+                                        </div>
+                                    </div>
+                                }
+                            </form>
+                            
                         </div>
                     </section>
+                    <app-reservation-detail-bagage (bagPriceOutput)="onBagPriceChange($event)" (mealPriceOutput)="onMealPriceChange($event)" (seatPriceOutput)="onSeatPriceChange($event)"></app-reservation-detail-bagage>
                 </div>
+                @if(total().amount != 0){
+                    <app-reservation-detail-payment [bagagePrice]="BagPrice()" [mealPriceInput]="MealPrice()" [seatPriceInput]="SeatPrice()" [passengersNumber]="passengerNumber()" [flightPriceAmount]="total().amount" ></app-reservation-detail-payment>
+                }
             </div>
         </div>
     </div>
-
     <app-footer></app-footer>
 </div>
