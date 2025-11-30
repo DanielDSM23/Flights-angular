@@ -15,10 +15,18 @@
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
+               @if (!isUserLogged) {
                 <button type="button" (click)="handleSignInClick()" class="flex gap-2 border bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-md py-1 px-3.5">
                     <lucide-angular [img]="user" class="h-4 w-4 text-grey-100 mt-0.5"></lucide-angular>
                     Sign In
                 </button>
+              }
+              @else {
+                <button type="button" (click)="handleDisconnectClick()" class="flex gap-2 border bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-md py-1 px-3.5">
+                    <lucide-angular [img]="logout" class="h-4 w-4 text-grey-100 mt-0.5"></lucide-angular>
+                    Disconnect
+                </button>
+              }
             </div>
 
             <!-- {/* Mobile Menu Button */} -->
